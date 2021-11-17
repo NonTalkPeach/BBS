@@ -1,0 +1,21 @@
+spring:
+  #数据源配置
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/personal_project?useUnicode=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  #邮箱配置、授权
+  mail:
+    host: smtp.qq.com
+    username: 245149633@qq.com
+    password: dvvgdpcjulrfbhba
+    properties:
+      mail.smtp.ssl.enable: true
+  thymeleaf:
+    cache: false
+#mybatis配置
+mybatis:
+  mapper-locations: classpath:/bbs/dao/mapper/*.xml
+  type-aliases-package: bbs.dao
+
