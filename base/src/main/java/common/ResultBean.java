@@ -1,9 +1,12 @@
-package base;
+package common;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * 各微服务之间通信Bean
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
+        <module>base</module>
         <module>gate</module>
         <module>eureka-server</module>
         <module>auth</module>
-        <module>base</module>
     </modules>
     <groupId>tao</groupId>
     <artifactId>bbs</artifactId>
