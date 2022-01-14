@@ -1,0 +1,30 @@
+server:
+  port: 8000
+spring:
+  #数据源配置
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/personal_project?useUnicode=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: 120.78.164.88
+    port: 6379
+    password: wuyutao
+  mail:
+    host: smtp.qq.com
+    username: 245149633@qq.com
+    password: dvvgdpcjulrfbhba
+    properties:
+      mail.smtp.ssl.enable: true
+  application:
+    name: auth-service
+mybatis:
+  mapper-locations: classpath:/auth/dao/mapper/*.xml
+  type-aliases-package: auth.entity
+myconfig:
+  weburl: http://wytcloud.top/
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/

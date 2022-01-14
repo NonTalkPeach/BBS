@@ -6,8 +6,9 @@
     <modules>
         <module>base</module>
         <module>gate</module>
-        <module>eureka-server</module>
-        <module>auth</module>
+        <module>eureka</module>
+        <module>auth-service</module>
+        <module>file-service</module>
     </modules>
     <groupId>tao</groupId>
     <artifactId>bbs</artifactId>
@@ -60,10 +61,25 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
+        <!--    单元测试    -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
         <!--    插件lombok    -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <!--    json转换模块    -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.75</version>
         </dependency>
     </dependencies>
     <build>

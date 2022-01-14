@@ -21,9 +21,25 @@
     <link rel="stylesheet" href="/assets/css/slick.css">
     <link rel="stylesheet" href="/assets/css/nice-select.css">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/my/mine.css">
+    <link rel="stylesheet" href="/tao/mine.css">
+    <script src="/tao/config.js"></script>
 </head>
 <body>
+<!--              前置渲染js              -->
+<script th:inline="javascript">
+    let tokenSign = [[${token}]];
+    if (tokenSign != null)
+        window.sessionStorage.setItem('token', JSON.stringify(tokenSign));
+    let loginMsgForAlert = [[${loginMsgForAlert}]]
+    if (loginMsgForAlert != null) {
+        if (window.sessionStorage.getItem('token') != null) window.sessionStorage.removeItem('token');
+        alert(loginMsgForAlert)
+    }
+    let msgForAlert = [[${msgForAlert}]]
+    if (msgForAlert != null) {
+        alert(msgForAlert)
+    }
+</script>
 <!-- Preloader Start -->
 <div id="preloader-active">
     <div class="preloader d-flex align-items-center justify-content-center">
@@ -56,19 +72,38 @@
                                     <ul id="navigation">
                                         <li><a href="/index">首页</a></li>
                                         <li><a href="/resource">资源</a></li>
-                                        <li><a href="/me/followed">关注</a></li>
-                                        <li><a href="/me/news">消息</a></li>
-                                        <li><a href="/me/my">我的</a></li>
-                                        <li><a href="/me/editor">发布帖子</a></li>
-                                        <li shiro:authenticated=""><img th:src="${session.avatarUrl}" class="taoAvatar"></li>
-                                        <li shiro:authenticated="" th:text="${session.nickname}" id="201925510124"></li>
+                                        <li><a href="/followed">关注</a></li>
+                                        <li><a href="/news">消息</a></li>
+                                        <li><a href="/my" id="url01">我的</a></li>
+                                        <li><a href="/editor">发布帖子</a></li>
                                     </ul>
                                 </nav>
                             </div>
-                            <div class="header-right-btn f-right d-none d-xl-block ml-20" shiro:notAuthenticated="">
-                                <a href="/login" class="btn header-btn">登录</a>
-                                <a href="/register" class="btn header-btn">注册</a>
+                            <div id="isAuth" style="display: inline">
+                                <div class="header-right-btn f-right d-none d-xl-block ml-20" >
+                                    <a href="/login" class="btn header-btn">登录</a>
+                                    <a href="/register" class="btn header-btn">注册</a>
+                                </div>
                             </div>
+                            <!--              导航栏渲染js              -->
+                            <script>
+                                let token = window.sessionStorage.getItem("token");
+                                if (token != null) {
+                                    document.getElementById('isAuth').style.display = 'none';
+                                    let strings = token.split("."); //截取token，获取载体
+                                    let tokenInfo = JSON.parse(decodeURIComponent(escape(window.atob(strings[1].replace(/-/g, "+").replace(/_/g, "/"))))); //解析，需要吧‘_’,'-'进行转换否则会无法解析
+                                    document.getElementById("url01").href += "/" + token.substring(1,token.length-1)
+                                    let temLi01 = document.createElement("li");
+                                    let temImg = document.createElement("img");
+                                    temImg.src = FILE_SERVER_URL + tokenInfo.userInfo.avatarUrl;
+                                    temImg.className = "taoAvatar"
+                                    temLi01.appendChild(temImg)
+                                    document.getElementById("navigation").appendChild(temLi01);
+                                    let temLi02 = document.createElement("li");
+                                    temLi02.innerText = tokenInfo.userInfo.username;
+                                    document.getElementById("navigation").appendChild(temLi02);
+                                }
+                            </script>
                         </div>
                     </div>
                     <span style="font-size: xx-small;color: darkgrey" th:text="'访问量:'+${visitors}"></span>
@@ -138,35 +173,12 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-<!--                            <nav class="blog-pagination justify-content-center d-flex">-->
-<!--                                <ul class="pagination">-->
-<!--                                    <li class="page-item">-->
-<!--                                        <a href="#" class="page-link" aria-label="Previous">-->
-<!--                                            <i class="ti-angle-left"></i>-->
-<!--                                        </a>-->
-<!--                                    </li>-->
-<!--                                    <li class="page-item">-->
-<!--                                        <a href="#" class="page-link">1</a>-->
-<!--                                    </li>-->
-<!--                                    <li class="page-item active">-->
-<!--                                        <a href="#" class="page-link">2</a>-->
-<!--                                    </li>-->
-<!--                                    <li class="page-item">-->
-<!--                                        <a href="#" class="page-link" aria-label="Next">-->
-<!--                                            <i class="ti-angle-right"></i>-->
-<!--                                        </a>-->
-<!--                                    </li>-->
-<!--                                </ul>-->
-<!--                            </nav>-->
                         </div>
                     </div>
 
                 </div>
             </div>
         <!--================Blog Area =================-->
-
     </main>
 <footer>
     <!-- Footer Start-->

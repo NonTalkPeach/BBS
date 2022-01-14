@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="/assets/css/slick.css">
     <link rel="stylesheet" href="/assets/css/nice-select.css">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/my/mine.css">
 
     <!--头像插件-->
     <script src="/avatar/jquery.min.js"></script>
@@ -31,6 +30,8 @@
     <link href="/avatar/sitelogo/sitelogo.css" rel="stylesheet">
     <script src="/avatar/cropper/cropper.min.js"></script>
     <script src="/avatar/sitelogo/sitelogo.js"></script>
+    <link rel="stylesheet" href="/tao/mine.css">
+    <script src="/tao/config.js"></script>
 </head>
 <body>
 <!-- Preloader Start -->
@@ -45,6 +46,16 @@
     </div>
 </div>
 <!-- Preloader Start -->
+<script th:inline="javascript">
+    var tokenSign = [[${token}]];
+    let strings = tokenSign.split("."); //截取token，获取载体
+    let tokenInfo = JSON.parse(decodeURIComponent(escape(window.atob(strings[1].replace(/-/g, "+").replace(/_/g, "/"))))); //解析，需要吧‘_’,'-'进行转换否则会无法解析
+    var username = tokenInfo.userInfo.username;
+    var avatarUrl = tokenInfo.userInfo.avatarUrl;
+    var userCode = tokenInfo.userInfo.userCode;
+    var email = tokenInfo.userInfo.email;
+    var level = tokenInfo.userInfo.level;
+</script>
 <header>
     <!-- Header Start -->
     <div class="header-area">
@@ -65,19 +76,38 @@
                                     <ul id="navigation">
                                         <li><a href="/index">首页</a></li>
                                         <li><a href="/resource">资源</a></li>
-                                        <li><a href="/me/followed">关注</a></li>
-                                        <li><a href="/me/news">消息</a></li>
-                                        <li><a href="/me/my">我的</a></li>
-                                        <li><a href="/me/editor">发布帖子</a></li>
-                                        <li shiro:authenticated=""><img th:src="${session.avatarUrl}" class="taoAvatar"></li>
-                                        <li shiro:authenticated="" th:text="${session.nickname}"></li>
+                                        <li><a href="/followed">关注</a></li>
+                                        <li><a href="/news">消息</a></li>
+                                        <li><a href="/my">我的</a></li>
+                                        <li><a href="/editor">发布帖子</a></li>
                                     </ul>
                                 </nav>
                             </div>
-                            <div class="header-right-btn f-right d-none d-xl-block ml-20" shiro:notAuthenticated="">
-                                <a href="/login" class="btn header-btn">登录</a>
-                                <a href="/register" class="btn header-btn">注册</a>
+                            <div id="isAuth" style="display: inline">
+                                <div class="header-right-btn f-right d-none d-xl-block ml-20" >
+                                    <a href="/login" class="btn header-btn">登录</a>
+                                    <a href="/register" class="btn header-btn">注册</a>
+                                </div>
                             </div>
+                            <script>
+                                let token = window.sessionStorage.getItem("token");
+                                if (token != null) {
+                                    document.getElementById('isAuth').style.display = 'none';
+                                    let strings = token.split("."); //截取token，获取载体
+                                    let tokenInfo = JSON.parse(decodeURIComponent(escape(window.atob(strings[1].replace(/-/g, "+").replace(/_/g, "/"))))); //解析，需要吧‘_’,'-'进行转换否则会无法解析
+
+                                    let temLi01 = document.createElement("li");
+                                    let temImg = document.createElement("img");
+                                    temImg.src = FILE_SERVER_URL + tokenInfo.userInfo.avatarUrl;
+                                    temImg.className = "taoAvatar"
+                                    temLi01.appendChild(temImg)
+                                    document.getElementById("navigation").appendChild(temLi01);
+
+                                    let temLi02 = document.createElement("li");
+                                    temLi02.innerText = tokenInfo.userInfo.username;
+                                    document.getElementById("navigation").appendChild(temLi02);
+                                }
+                            </script>
                         </div>
                     </div>
                     <span style="font-size: xx-small;color: darkgrey" th:text="'访问量:'+${visitors}"></span>
@@ -100,8 +130,13 @@
                 <div class="ibox-content">
                     <div class="row">
                         <div id="crop-avatar" class="col-md-6">
-                            <div class="avatar-view" title="更换头像">
-                                <img th:src="${session.avatarUrl}" alt="Logo">
+                            <div class="avatar-view" title="更换头像" id="changeAvatar">
+                                <script>
+                                    let img = document.createElement("img");
+                                    img.src = FILE_SERVER_URL + this.avatarUrl;
+                                    img.alt="Logo"
+                                    document.getElementById("changeAvatar").appendChild(img)
+                                </script>
                             </div>
                         </div>
                     </div>
@@ -109,17 +144,22 @@
                 <div class="modal fade" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                            <form class="avatar-form" action="/me/upload_avatar" enctype="multipart/form-data" method="post">
+                            <form class="avatar-form" action="/uploadAvatar" enctype="multipart/form-data" method="post">
                                 <div class="modal-header">
                                     <button class="close" data-dismiss="modal" type="button">&times;</button>
                                 </div>
                                 <div class="modal-body">
                                     <div class="avatar-body">
                                         <div class="avatar-upload">
-                                            <input class="avatar-src" name="avatar_src" type="hidden">
-                                            <input class="avatar-data" name="avatar_data" type="hidden">
+                                            <input name="userToken" type="hidden" id="uploadToken">
+                                            <script>
+                                                document.getElementById("uploadToken").value = this.tokenSign
+                                            </script>
+                                            <input class="avatar-src" name="avatarSrc" type="hidden">
+                                            <input class="avatar-data" name="avatarData" type="hidden">
                                             <label for="avatarInput">头像上传</label>
-                                            <input class="avatar-input" id="avatarInput" name="avatar_file" type="file"></div>
+                                            <input class="avatar-input" id="avatarInput" name="avatarFile" type="file">
+                                        </div>
                                         <div class="row">
                                             <div class="col-md-9">
                                                 <div class="avatar-wrapper"></div>
@@ -153,13 +193,16 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <blockquote class="generic-blockquote">
-                            鱼水id:  <span th:text="${id}"></span>
+                            鱼水id:  <span><script>document.write(this.userCode);</script></span>
                         </blockquote>
                         <blockquote class="generic-blockquote">
-                            昵称:  <span th:text="${nickname}"></span>
+                            用户名:  <span><script>document.write(this.username);</script></span>
                         </blockquote>
                         <blockquote class="generic-blockquote">
-                            邮箱:  <span th:text="${email}"></span>
+                            邮箱:  <span><script>document.write(this.email);</script></span>
+                        </blockquote>
+                        <blockquote class="generic-blockquote">
+                            等级:  <span><script>document.write(this.level);</script></span>
                         </blockquote>
                     </div>
                 </div>

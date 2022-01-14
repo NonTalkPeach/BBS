@@ -3,3 +3,9 @@ server:
 spring:
   thymeleaf:
     cache: false
+eureka:
+  client:
+    register-with-eureka: false #是否向注册中心注册自己 消费者不需要注册自己
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka/

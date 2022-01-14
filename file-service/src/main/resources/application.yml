@@ -1,0 +1,25 @@
+server:
+  port: 8001
+spring:
+  #数据源配置
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/personal_project?useUnicode=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  web:
+    resources:
+      static-locations:
+        - classpath:/public
+        - file:/${myconfig.filelocation}
+mybatis:
+  mapper-locations: classpath:/file/dao/mapper/*.xml
+  type-aliases-package: file.entity
+  application:
+    name: file-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+myconfig:
+  filelocation: C:/Users/dell/Desktop/新建文件夹

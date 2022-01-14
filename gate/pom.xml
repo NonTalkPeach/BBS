@@ -16,11 +16,22 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-thymeleaf</artifactId>
     </dependency>
-    <!--   前端模板引擎thymeleaf 与安全框架shiro连接使用    -->
+<!--    获取服务-->
     <dependency>
-        <groupId>com.github.theborakompanioni</groupId>
-        <artifactId>thymeleaf-extras-shiro</artifactId>
-        <version>2.0.0</version>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+    </dependency>
+<!--    上传文件-->
+    <dependency>
+        <groupId>commons-fileupload</groupId>
+        <artifactId>commons-fileupload</artifactId>
+        <version>1.4</version>
+    </dependency>
+    <!-- token 生成器 JWT包 -->
+    <dependency>
+        <groupId>com.auth0</groupId>
+        <artifactId>java-jwt</artifactId>
+        <version>3.18.2</version>
     </dependency>
 </dependencies>
 

@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="/assets/css/slick.css">
     <link rel="stylesheet" href="/assets/css/nice-select.css">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/my/mine.css">
+    <link rel="stylesheet" href="/tao/mine.css">
+    <script src="/tao/config.js"></script>
     <script>
         function checkSame() {
             let p1=document.getElementById("inputpassword").value
@@ -68,19 +69,38 @@
                                     <ul id="navigation">
                                         <li><a href="/index">首页</a></li>
                                         <li><a href="/resource">资源</a></li>
-                                        <li><a href="/me/followed">关注</a></li>
-                                        <li><a href="/me/news">消息</a></li>
-                                        <li><a href="/me/my">我的</a></li>
-                                        <li><a href="/me/editor">发布帖子</a></li>
-                                        <li shiro:authenticated=""><img th:src="${session.avatarUrl}" class="taoAvatar"></li>
-                                        <li shiro:authenticated="" th:text="${session.nickname}"></li>
+                                        <li><a href="/followed">关注</a></li>
+                                        <li><a href="/news">消息</a></li>
+                                        <li><a href="/my">我的</a></li>
+                                        <li><a href="/editor">发布帖子</a></li>
                                     </ul>
                                 </nav>
                             </div>
-                            <div class="header-right-btn f-right d-none d-xl-block ml-20" shiro:notAuthenticated="">
-                                <a href="/login" class="btn header-btn">登录</a>
-                                <a href="/register" class="btn header-btn">注册</a>
+                            <div id="isAuth" style="display: inline">
+                                <div class="header-right-btn f-right d-none d-xl-block ml-20" >
+                                    <a href="/login" class="btn header-btn">登录</a>
+                                    <a href="/register" class="btn header-btn">注册</a>
+                                </div>
                             </div>
+                            <script>
+                                let token = window.sessionStorage.getItem("token");
+                                if (token != null) {
+                                    document.getElementById('isAuth').style.display = 'none';
+                                    let strings = token.split("."); //截取token，获取载体
+                                    let tokenInfo = JSON.parse(decodeURIComponent(escape(window.atob(strings[1].replace(/-/g, "+").replace(/_/g, "/"))))); //解析，需要吧‘_’,'-'进行转换否则会无法解析
+
+                                    let temLi01 = document.createElement("li");
+                                    let temImg = document.createElement("img");
+                                    temImg.src = FILE_SERVER_URL + tokenInfo.userInfo.avatarUrl;
+                                    temImg.className = "taoAvatar"
+                                    temLi01.appendChild(temImg)
+                                    document.getElementById("navigation").appendChild(temLi01);
+
+                                    let temLi02 = document.createElement("li");
+                                    temLi02.innerText = tokenInfo.userInfo.username;
+                                    document.getElementById("navigation").appendChild(temLi02);
+                                }
+                            </script>
                         </div>
                     </div>
                     <span style="font-size: xx-small;color: darkgrey" th:text="'访问量:'+${visitors}"></span>
@@ -103,11 +123,12 @@
                     </div>
                 </div>
                 <div>
+                    <p th:text="${msg}" style="color: red"></p>
                     <form action="/toRegister" method="post" class="contact-wrapper">
-                        昵称:<input type="text" name="nickname" placeholder="昵称" required>
+                        用户名:<input type="text" name="username" placeholder="用户名" required>
                         邮箱:<input type="email" name="email" placeholder="邮箱" required>
                         密码:<input type="password" id="inputpassword" name="spassword" placeholder="密码" required onblur="checkSame()">
-                        确认密码:<input type="password" id="inputpassword2" name="password" placeholder="密码" required onblur="checkSame()">
+                        确认密码:<input type="password" id="inputpassword2" name="passwd" placeholder="密码" required onblur="checkSame()">
                         <span style="color: red" hidden id="notsame">两次密码不一致,将无法提交!</span>
                         <button class="submit-btn2" type="submit" id="sub">提交</button>
                     </form>
