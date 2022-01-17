@@ -96,7 +96,6 @@
                             </script>
                         </div>
                     </div>
-                    <span style="font-size: xx-small;color: darkgrey" th:text="'访问量:'+${visitors}"></span>
                     <!-- Mobile Menu -->
                     <div class="col-12">
                         <div class="mobile_menu d-block d-lg-none"></div>
@@ -204,9 +203,13 @@
     var E = window.wangEditor
     var editor = new E('#editor')
     // 配置服务器端地址
-    editor.customConfig.uploadImgServer = 'http://wytcloud.top/me/editor/upload'
+    editor.customConfig.uploadImgServer = '/uploadBlogImg'
+    let userToken = this.sessionStorage.getItem("token");
+    editor.customConfig.uploadImgParams = {
+        userToken: userToken.substring(1,userToken.length - 1)
+    };
     //配置指定文件名
-    editor.customConfig.uploadFileName = 'file'
+    editor.customConfig.uploadFileName = 'blogImg'
     //如果图片不大，可以用base64存储
     //editor.customConfig.uploadImgShowBase64 = true
     editor.customConfig.menus = [
@@ -230,6 +233,7 @@
         'redo'  // 重复
     ]
     editor.create()
+
     function send() {
         let content = editor.txt.html();
         let title = document.getElementById("fucktitle").value
@@ -242,7 +246,7 @@
                     "title":title
                 },
                 success:function (res) {
-                    window.location.href = 'http://wytcloud.top';
+                    window.location.href = WEB_URL;
                 }
             })
         }

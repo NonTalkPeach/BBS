@@ -22,9 +22,9 @@ spring:
 mybatis:
   mapper-locations: classpath:/auth/dao/mapper/*.xml
   type-aliases-package: auth.entity
-myconfig:
-  weburl: http://wytcloud.top/
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka/
+myconfig:
+  web-url: http://localhost

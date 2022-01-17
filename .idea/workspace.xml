@@ -19,109 +19,43 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10011b1f-c22e-4c08-9d3d-8224d3efdcba" name="Default Changelist" comment="tes">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_75.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_jakarta_mail_1_6_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_6_1_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_65_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_65_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_65_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_65_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_65_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_65_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_mail_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_client_3_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_3_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/auth/controller/config/GlobalControllerExceptionConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/auth/redis/OpsForString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/auth/utils/MailUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/test/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-service/file-service.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/FileServiceStarter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/config/FileServiceConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/controller/AvatarController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/controller/config/GlobalControllerExceptionConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/dao/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/dao/mapper/userMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/service/Impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gate/src/main/java/gate/aop/LoginedControllerAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gate/src/main/java/gate/config/FileServiceConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gate/src/main/java/gate/config/RestTemplateConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gate/src/main/java/gate/controller/LoginRegisterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gate/src/main/java/gate/controller/LoginedController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gate/src/main/java/gate/controller/config/GlobalControllerExceptionConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gate/src/main/java/gate/utils/ForwardUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gate/src/main/resources/static/tao/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_theborakompanioni_thymeleaf_extras_shiro_2_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="10011b1f-c22e-4c08-9d3d-8224d3efdcba" name="Default Changelist" comment="finish a half">
+      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/aop/SecurityAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/config/RestTemplateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/controller/DownloadController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/controller/FilesInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/controller/UploadController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/dao/ResourceMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/dao/mapper/resourceMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/entity/Resource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/service/Impl/ResourceServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/service/ResourceService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gate/src/main/java/gate/config/WangEditorResponseBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/entity/Blog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/entity/BlogImg.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/entity/Comment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/entity/Resource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/main/java/entity/UserAvatar.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/file-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/src/main/java/controller/HomeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller/src/main/java/controller/api/ToRegisterController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAO/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAO/src/main/java/dao/UserMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAO/src/main/java/dao/mapper/UserMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAO/src/main/java/starter/DAOStarter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAO/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/src/main/java/service/Impl/UserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service/src/main/java/service/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/auth.iml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/auth-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/main/java/auth/AuthStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/auth/AuthServiceStarter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/main/java/auth/config/ShiroRealm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/main/java/auth/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/auth/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/main/java/auth/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/auth/controller/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/main/java/auth/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/auth/dao/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/main/java/auth/dao/mapper/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/auth/dao/mapper/userMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/main/java/auth/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/auth/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/main/java/auth/service/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/auth/service/Impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/main/java/auth/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/auth/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/main/java/auth/utils/JWTTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/auth/utils/JWTTokenUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/main/java/test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/auth-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/auth-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/auth/utils/MailUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/auth/utils/MailUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/base.iml" beforeDir="false" afterPath="$PROJECT_DIR$/base/base.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/base/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/src/main/java/common/ResultBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/src/main/java/base/correspond/CorrespondBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/src/main/java/dao/BaseMapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bbs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bbs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/eureka-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka/eureka.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/java/eurekaserver/EurekaStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/eureka/src/main/java/eurekaserver/EurekaStarter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka/eureka.iml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka/eureka.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-service/file-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/file-service/file-service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-service/src/main/java/file/config/FileServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-service/src/main/java/file/config/FileServiceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-service/src/main/java/file/controller/AvatarController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-service/src/main/java/file/controller/config/GlobalControllerExceptionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-service/src/main/java/file/controller/config/GlobalControllerExceptionConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/file-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gate/gate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gate/gate.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gate/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gate/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/GateStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/java/gate/GateStarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/aop/LoginedControllerAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/java/gate/aop/SecurityAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/java/gate/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/controller/LoginRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/java/gate/controller/LoginRegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/controller/LoginedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/java/gate/controller/LoginedController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/utils/ForwardUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/src/main/java/base/correspond/ForwardUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gate/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/public/defaultHead.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/file-service/src/main/resources/public/avatarImg/defaultAvatar.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/static/my/mine.css" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/static/tao/mine.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/static/tao/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/static/tao/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/static/wangEditor/wangEditor.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/static/wangEditor/wangEditor.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gate/src/main/resources/templates/editor.html" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/editor.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gate/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/templates/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/message.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/templates/my.html" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/my.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gate/src/main/resources/templates/resource.html" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/resource.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -153,7 +87,6 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
@@ -168,7 +101,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/file-service/src/main/java/file" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/gate/src/main/resources/static/wangEditor" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -177,24 +111,26 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\GitHub仓库\BBS\file-service\src\main\resources\public\avatarImg" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="file.config" />
+      <recent name="file.controller.config" />
+      <recent name="gate.controller.config" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\GitHub仓库\BBS\gate\src\main\resources\static\wangEditor" />
+      <recent name="E:\GitHub仓库\BBS\gate\target\classes\static\wangEditor" />
       <recent name="E:\GitHub仓库\BBS\file-service\src\main\java\file" />
       <recent name="E:\GitHub仓库\BBS\file-service\src\main\resources\public" />
       <recent name="E:\GitHub仓库\BBS\gate\src\main\resources\static\my" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="file.controller.config" />
-      <recent name="file.config" />
-      <recent name="gate.controller.config" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\GitHub仓库\BBS\file-service\src\main\resources\public\avatarImg" />
-    </key>
   </component>
-  <component name="RunManager" selected="JUnit.Test.test02">
+  <component name="RunManager" selected="Spring Boot.GateStarter">
     <configuration name="Test.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="auth-service" />
       <option name="PACKAGE_NAME" value="" />
@@ -290,8 +226,18 @@
       <workItem from="1641711175000" duration="11500000" />
       <workItem from="1641804606576" duration="16070000" />
       <workItem from="1641885737454" duration="18656000" />
-      <workItem from="1642060524828" duration="32872000" />
+      <workItem from="1642060524828" duration="32971000" />
+      <workItem from="1642230658074" duration="13063000" />
+      <workItem from="1642409151569" duration="19619000" />
     </task>
+    <task id="LOCAL-00001" summary="finish a half">
+      <created>1642180877864</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1642180877865</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,19 +255,23 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="finish a half" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish a half" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="249" y="0" key="#Project_Structure" timestamp="1642060637272">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1642060637272" />
-    <state x="489" y="211" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1642064696272">
+    <state x="489" y="211" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1642435296997">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="489" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1642064696272" />
-    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser" timestamp="1642177036606">
+    <state x="489" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1642435296997" />
+    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser" timestamp="1642238802565">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1642177036606" />
+    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1642238802565" />
     <state x="415" y="334" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1641719053326">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -334,54 +284,54 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="439" y="49" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1641655676763" />
-    <state width="1493" height="233" key="GridCell.Tab.0.bottom" timestamp="1642180022197">
+    <state width="1493" height="269" key="GridCell.Tab.0.bottom" timestamp="1642436856071">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1642180022197" />
-    <state width="1493" height="233" key="GridCell.Tab.0.center" timestamp="1642180022197">
+    <state width="1493" height="269" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1642436856071" />
+    <state width="1493" height="269" key="GridCell.Tab.0.center" timestamp="1642436856071">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1642180022197" />
-    <state width="1493" height="233" key="GridCell.Tab.0.left" timestamp="1642180022197">
+    <state width="1493" height="269" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1642436856071" />
+    <state width="1493" height="269" key="GridCell.Tab.0.left" timestamp="1642436856071">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1642180022197" />
-    <state width="1493" height="233" key="GridCell.Tab.0.right" timestamp="1642180022197">
+    <state width="1493" height="269" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1642436856071" />
+    <state width="1493" height="269" key="GridCell.Tab.0.right" timestamp="1642436856071">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1642180022197" />
-    <state width="1493" height="233" key="GridCell.Tab.1.bottom" timestamp="1642180022197">
+    <state width="1493" height="269" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1642436856071" />
+    <state width="1493" height="269" key="GridCell.Tab.1.bottom" timestamp="1642436856072">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1642180022197" />
-    <state width="1493" height="233" key="GridCell.Tab.1.center" timestamp="1642180022197">
+    <state width="1493" height="269" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1642436856072" />
+    <state width="1493" height="269" key="GridCell.Tab.1.center" timestamp="1642436856072">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1642180022197" />
-    <state width="1493" height="233" key="GridCell.Tab.1.left" timestamp="1642180022197">
+    <state width="1493" height="269" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1642436856072" />
+    <state width="1493" height="269" key="GridCell.Tab.1.left" timestamp="1642436856072">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1642180022197" />
-    <state width="1493" height="233" key="GridCell.Tab.1.right" timestamp="1642180022197">
+    <state width="1493" height="269" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1642436856072" />
+    <state width="1493" height="269" key="GridCell.Tab.1.right" timestamp="1642436856072">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="233" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1642180022197" />
-    <state width="1493" height="588" key="GridCell.Tab.2.bottom" timestamp="1641723993851">
+    <state width="1493" height="269" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1642436856072" />
+    <state width="1493" height="317" key="GridCell.Tab.2.bottom" timestamp="1642421894839">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="588" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1641723993851" />
-    <state width="1493" height="588" key="GridCell.Tab.2.center" timestamp="1641723993851">
+    <state width="1493" height="317" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1642421894839" />
+    <state width="1493" height="317" key="GridCell.Tab.2.center" timestamp="1642421894839">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="588" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1641723993851" />
-    <state width="1493" height="588" key="GridCell.Tab.2.left" timestamp="1641723993851">
+    <state width="1493" height="317" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1642421894839" />
+    <state width="1493" height="317" key="GridCell.Tab.2.left" timestamp="1642421894839">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="588" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1641723993851" />
-    <state width="1493" height="588" key="GridCell.Tab.2.right" timestamp="1641723993851">
+    <state width="1493" height="317" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1642421894839" />
+    <state width="1493" height="317" key="GridCell.Tab.2.right" timestamp="1642421894839">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="588" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1641723993851" />
+    <state width="1493" height="317" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1642421894839" />
     <state x="147" y="65" key="MergeDialog" timestamp="1641542400443">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -390,6 +340,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1642002225392" />
+    <state x="499" y="170" key="extract.method.dialog" timestamp="1642424425592">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="170" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1642424425592" />
     <state x="524" y="123" key="git4idea.branch.GitSmartOperationDialog" timestamp="1641542386430">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

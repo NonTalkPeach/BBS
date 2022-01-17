@@ -14,7 +14,13 @@ public class GlobalControllerExceptionConfig {
 
     @ExceptionHandler(value = Exception.class)
     public CorrespondBean globalExceptionCatch(Exception ex) {
+        CorrespondBean correspondBean;
         log.error("[Tao 's words] : "+ex.toString());
-        return CorrespondBean.getFailBean("程序出现错误，请联系管理员");
+        if (ex.getMessage().equals("IllegalToken")) {
+            correspondBean = CorrespondBean.getFailBean("非法令牌！");
+        } else {
+            correspondBean = CorrespondBean.getFailBean("程序出现错误，请联系管理员");
+        }
+        return correspondBean;
     }
 }

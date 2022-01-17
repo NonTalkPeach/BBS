@@ -1,7 +1,7 @@
 package gate.aop;
 
 import base.correspond.CorrespondBean;
-import gate.utils.ForwardUtil;
+import base.correspond.ForwardUtil;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 
 @Aspect
 @Component
-public class LoginedControllerAspect {
+public class SecurityAspect {
     @Autowired
     RestTemplate restTemplate;
     private static final String REST_URL_PREFIX_AUTH = "http://AUTH-SERVICE/api/auth";

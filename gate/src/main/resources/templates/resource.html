@@ -119,8 +119,13 @@
             <div class="section-top-border">
                 <div class="row">
                     <div style="font-size: xx-large">公开资源</div>
-                    <form action="/me/uploadShare" enctype="multipart/form-data" method="post" style="margin-top: 1%;margin-left: 32%">
-                        <input type="file" name="shareFile">
+                    <form action="/uploadPublicFile" enctype="multipart/form-data" method="post" style="margin-top: 1%;margin-left: 32%">
+                        <input name="userToken" type="hidden" id="uploadToken">
+                        <script>
+                            let temToken = window.sessionStorage.getItem('token')
+                            document.getElementById("uploadToken").value = temToken.substring(1,temToken.length - 1)
+                        </script>
+                        <input type="file" name="publicFile">
                         <button class="btn btn-primary" style="padding: 15px 15px;">提交公开资源</button>
                     </form>
                 </div>
@@ -131,48 +136,17 @@
                             <div class="country">文件名</div>
                             <div class="country">文件描述</div>
                             <div class="visit">下载量</div>
-                            <div class="percentage">上传者</div>
+                            <div class="percentage">上传者(鱼水id)</div>
                             <div class="visit">Fish</div>
                         </div>
-                        <div class="table-row" th:each="item:${shareUpload}">
+                        <div class="table-row" th:each="item:${publicResources}">
                             <div class="serial" th:text="${itemStat.index}+1"></div>
-                            <div class="country" th:text="${item.filename}"></div>
+                            <div class="country" th:text="${item.fileName}"></div>
                             <div class="country">无</div>
-                            <div class="visit" th:text="${item.downloadnum}"></div>
-                            <div class="percentage">鱼水id:<span th:text="${item.uploaderid}"></span></div>
+                            <div class="visit" th:text="${item.downloadSum}"></div>
+                            <div class="percentage"><span th:text="${item.ownerCode}"></span></div>
                             <div class="visit">
-                                <a class="btn btn-primary" style="padding: 15px 15px; color: white" th:href="'/downloadShare/'+${item.localname}"  >下载</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section-top-border" shiro:authenticated="">
-                <div class="row">
-                    <div style="font-size: xx-large">私人资源</div>
-                    <form action="/me/uploadPrivate" enctype="multipart/form-data" method="post" style="margin-top: 1%;margin-left: 32%">
-                        <input type="file" name="privateFile">
-                        <button class="btn btn-primary" style="padding: 15px 15px;">提交私人资源</button>
-                    </form>
-                </div>
-                <div class="progress-table-wrap">
-                    <div class="progress-table">
-                        <div class="table-head">
-                            <div class="serial">#</div>
-                            <div class="country">文件名</div>
-                            <div class="country">文件描述</div>
-                            <div class="visit">下载量</div>
-                            <div class="percentage">上传者</div>
-                            <div class="visit">Fish</div>
-                        </div>
-                        <div class="table-row" th:each="item:${privateUpload}">
-                            <div class="serial" th:text="${itemStat.index}+1"></div>
-                            <div class="country" th:text="${item.filename}"></div>
-                            <div class="country">无</div>
-                            <div class="visit" th:text="${item.downloadnum}"></div>
-                            <div class="percentage">鱼水id:<span th:text="${item.uploaderid}"></span></div>
-                            <div class="visit">
-                                <a class="btn btn-primary" style="padding: 15px 15px; color: white" th:href="'me/downloadPrivate/'+${item.localname}"  >下载</a>
+                                <a class="btn btn-primary" style="padding: 15px 15px; color: white" th:href="${FILE_SERVER_URL}+'/get/resources/'+${item.ownerCode}+'_'+${item.timestamp}+'_'+${item.fileName}">下载</a>
                             </div>
                         </div>
                     </div>
