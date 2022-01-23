@@ -1,4 +1,4 @@
-package file;
+package blog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,8 +6,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
-public class FileServiceStarter {
+public class BlogServiceStarter {
     public static void main(String[] args) {
-        SpringApplication.run(FileServiceStarter.class,args);
+        SpringApplication.run(BlogServiceStarter.class,args);
     }
 }

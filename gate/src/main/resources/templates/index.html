@@ -86,25 +86,7 @@
                                 </div>
                             </div>
                             <!--              导航栏渲染js              -->
-                            <script>
-                                let token = window.sessionStorage.getItem("token");
-                                if (token != null) {
-                                    document.getElementById('isAuth').style.display = 'none';
-                                    let strings = token.split("."); //截取token，获取载体
-                                    let tokenInfo = JSON.parse(decodeURIComponent(escape(window.atob(strings[1].replace(/-/g, "+").replace(/_/g, "/"))))); //解析，需要吧‘_’,'-'进行转换否则会无法解析
-                                    document.getElementById("url01").href = "/my/" + token.substring(1,token.length-1)
-                                    document.getElementById("url02").href = "/editor/" + token.substring(1,token.length-1)
-                                    let temLi01 = document.createElement("li");
-                                    let temImg = document.createElement("img");
-                                    temImg.src = FILE_SERVER_URL + tokenInfo.userInfo.avatarUrl;
-                                    temImg.className = "taoAvatar"
-                                    temLi01.appendChild(temImg)
-                                    document.getElementById("navigation").appendChild(temLi01);
-                                    let temLi02 = document.createElement("li");
-                                    temLi02.innerText = tokenInfo.userInfo.username;
-                                    document.getElementById("navigation").appendChild(temLi02);
-                                }
-                            </script>
+                            <script> navStarter() </script>
                         </div>
                     </div>
                     <span style="font-size: xx-small;color: darkgrey" th:text="'访问量:'+${visitors}"></span>
@@ -143,36 +125,40 @@
 
                                 <div class="blog_details" th:each="blog:${blogs}">
                                     <div class="row" style="margin-bottom: 15px">
-                                        <img th:src="${blog.avatarUrl}" class="taoAvatar">
-                                        <div style="margin-top: 16px;margin-left: 10px" th:text="${blog.nickname}"></div>
+                                        <img th:src="${FILE_SERVER_URL} + ${blog.avatarUrl}" class="taoAvatar">
+                                        <div style="margin-top: 16px;margin-left: 10px" th:text="${blog.username}"></div>
                                     </div>
                                         <h2 th:text="${blog.title}" class="text-center"></h2>
                                     <div style="width: 100%;height: 3px;background-color: #999999 "></div>
                                     <div th:utext="${blog.content}"></div>
                                     <ul class="blog-info-link">
-                                        <li style="color: #999999" th:text="${blog.date}"></li>
+                                        <li style="color: #999999">
+                                            <script th:inline="javascript">
+                                                document.write(timeFmt([[${blog.createDate}]]))
+                                            </script>
+                                        </li>
                                     </ul>
                                     <ul class="blog-info-link">
-                                        <li><a href="javascript:like(this)" th:name="${blog.blogid}" class="likes" ><i class="fa fa-heart"></i><span th:text="${blog.likes}"></span> 赞</a></li>
-                                        <li><a href="javascript:comments(this)" class="comments" th:name="${blog.blogid}"><i class="fa fa-comments"></i>评论</a></li>
+                                        <li><a href="javascript:like(this)" th:name="${blog.id}" class="likes" ><i class="fa fa-heart"></i><span th:text="${blog.id}"></span> 赞</a></li>
+                                        <li><a href="javascript:comments(this)" class="comments" th:name="${blog.id}"><i class="fa fa-comments"></i>评论</a></li>
                                     </ul>
-                                    <div th:name="${blog.blogid}" hidden>
+                                    <div th:name="${blog.id}" hidden>
                                         <input type="text">
-                                        <button class="btn btn-primary" style="padding: 15px 15px;" th:name="${blog.blogid}">发送</button>
+                                        <button class="btn btn-primary" style="padding: 15px 15px;" th:name="${blog.id}">发送</button>
                                     </div>
 
-                                    <div class="about-me">
-                                        <div class="about-me-caption" style="margin-top: 6px" th:name="${blog.blogid}">
-                                            <h5 style="margin-left: 3%" th:each="comment:${blog.comments}">
-                                                <div class="row">
-                                                    <img th:src="${comment.commenteravatarurl}" class="taoComment">
-                                                    <div style="margin-top: 8px;margin-left: 5px;font-size: medium" th:text="${comment.commenternickname}"></div>
-                                                    <span style="margin-top: 8px;margin-left: 5px;font-size: medium">:</span>
-                                                    <span style="margin-top: 8px;margin-left: 5px;font-size: medium" th:text="${comment.content}"></span>
-                                                </div>
-                                            </h5>
-                                        </div>
-                                    </div>
+<!--                                    <div class="about-me">-->
+<!--                                        <div class="about-me-caption" style="margin-top: 6px" th:name="${blog.blogid}">-->
+<!--                                            <h5 style="margin-left: 3%" th:each="comment:${blog.comments}">-->
+<!--                                                <div class="row">-->
+<!--                                                    <img th:src="${comment.commenteravatarurl}" class="taoComment">-->
+<!--                                                    <div style="margin-top: 8px;margin-left: 5px;font-size: medium" th:text="${comment.commenternickname}"></div>-->
+<!--                                                    <span style="margin-top: 8px;margin-left: 5px;font-size: medium">:</span>-->
+<!--                                                    <span style="margin-top: 8px;margin-left: 5px;font-size: medium" th:text="${comment.content}"></span>-->
+<!--                                                </div>-->
+<!--                                            </h5>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
                                 </div>
                         </div>
                     </div>

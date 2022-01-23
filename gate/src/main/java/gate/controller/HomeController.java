@@ -13,15 +13,23 @@ import org.springframework.web.client.RestTemplate;
  */
 @Controller
 public class HomeController {
+    private static final String REST_URL_PREFIX_FILE = "http://FILE-SERVICE/api/file";
+    private static final String REST_URL_PREFIX_Blog = "http://BLOG-SERVICE/api/blog";
+
     @Value("${myconfig.file-server-url}")
     private String fileServerUrl;
 
     @Autowired
     RestTemplate restTemplate;
-    private static final String REST_URL_PREFIX_FILE = "http://FILE-SERVICE/api/file";
 
     @GetMapping({"/","/index"})
-    public String index(){
+    public String index(Model model){
+        CorrespondBean correspondBean = restTemplate.getForObject(
+                REST_URL_PREFIX_Blog + "/getAllBlogs",
+                CorrespondBean.class
+        );
+        model.addAttribute("FILE_SERVER_URL",fileServerUrl);
+        model.addAttribute("blogs",correspondBean.getData());
         return "index";
     }
 

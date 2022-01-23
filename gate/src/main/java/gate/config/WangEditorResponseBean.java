@@ -8,10 +8,6 @@ import java.util.List;
 public class WangEditorResponseBean {
     String errno;
     List<String> data;
-    public WangEditorResponseBean(String errno,List<String> data){
-        this.errno=errno;
-        this.data=data;
-    }
     public WangEditorResponseBean(String errno,String data){
         this.errno=errno;
         this.data=new ArrayList<>();

@@ -13,7 +13,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/api/file")
 @ResponseBody
-public class FilesInfoController {
+public class FileInfoController {
     @Autowired
     private ResourceService resourceService;
     /**

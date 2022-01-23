@@ -18,7 +18,7 @@ public class SecurityAspect {
     RestTemplate restTemplate;
     private static final String REST_URL_PREFIX_AUTH = "http://AUTH-SERVICE/api/auth";
 
-    @Pointcut("execution(* gate.controller.LoginedController.*(..))")
+    @Pointcut("execution(* gate.controller.logined.*.*(..))")
     public void pointCut(){
 
     }

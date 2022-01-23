@@ -20,42 +20,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10011b1f-c22e-4c08-9d3d-8224d3efdcba" name="Default Changelist" comment="finish a half">
-      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/aop/SecurityAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/config/RestTemplateConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/controller/DownloadController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/controller/FilesInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/controller/UploadController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/dao/ResourceMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/dao/mapper/resourceMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/entity/Resource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/service/Impl/ResourceServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-service/src/main/java/file/service/ResourceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gate/src/main/java/gate/config/WangEditorResponseBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_5_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-service/blog-service.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-service/src/main/java/blog/BlogServiceStarter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-service/src/main/java/blog/controller/BlogInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-service/src/main/java/blog/controller/CommentAndLikeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-service/src/main/java/blog/controller/PublishController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-service/src/main/java/blog/controller/config/GlobalControllerExceptionConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-service/src/main/java/blog/dao/BlogMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-service/src/main/java/blog/dao/mapper/blogMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-service/src/main/java/blog/entity/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-service/src/main/java/blog/entity/BlogForView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-service/src/main/java/blog/entity/BlogLike.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-service/src/main/java/blog/service/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-service/src/main/java/blog/service/Impl/BlogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gate/src/main/java/gate/controller/logined/LoginedBlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gate/src/main/java/gate/controller/logined/LoginedUploadController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gate/src/main/java/gate/controller/logined/LoginedViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/auth-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/auth-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/auth/utils/MailUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/auth/utils/MailUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/base.iml" beforeDir="false" afterPath="$PROJECT_DIR$/base/base.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bbs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bbs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka/eureka.iml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka/eureka.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-service/file-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/file-service/file-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-service/src/main/java/file/config/FileServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-service/src/main/java/file/config/FileServiceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-service/src/main/java/file/controller/AvatarController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-service/src/main/java/file/controller/config/GlobalControllerExceptionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-service/src/main/java/file/controller/config/GlobalControllerExceptionConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/file-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/gate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gate/gate.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gate/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/aop/LoginedControllerAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/java/gate/aop/SecurityAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/auth/controller/config/GlobalControllerExceptionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/auth/controller/config/GlobalControllerExceptionConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/src/main/java/base/correspond/ForwardUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/src/main/java/base/correspond/ForwardUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-service/src/main/java/file/FileServiceStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-service/src/main/java/file/FileServiceStarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-service/src/main/java/file/controller/FilesInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-service/src/main/java/file/controller/FileInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/aop/SecurityAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/java/gate/aop/SecurityAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/config/WangEditorResponseBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/java/gate/config/WangEditorResponseBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/java/gate/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/controller/LoginRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/java/gate/controller/LoginRegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/controller/LoginedController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/java/gate/controller/LoginedController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/utils/ForwardUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/src/main/java/base/correspond/ForwardUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/controller/LoginedController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/controller/config/GlobalControllerExceptionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/java/gate/controller/config/GlobalControllerExceptionConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gate/src/main/resources/static/tao/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/static/tao/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/static/wangEditor/wangEditor.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/static/wangEditor/wangEditor.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gate/src/main/resources/templates/editor.html" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/editor.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gate/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/templates/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/message.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/templates/my.html" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/my.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gate/src/main/resources/templates/resource.html" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/resource.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -74,8 +79,8 @@
         <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="Aspect" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -87,6 +92,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
@@ -111,16 +117,8 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\GitHub仓库\BBS\file-service\src\main\resources\public\avatarImg" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="file.config" />
-      <recent name="file.controller.config" />
-      <recent name="gate.controller.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\GitHub仓库\BBS\gate\src\main\resources\static\wangEditor" />
@@ -129,18 +127,17 @@
       <recent name="E:\GitHub仓库\BBS\file-service\src\main\resources\public" />
       <recent name="E:\GitHub仓库\BBS\gate\src\main\resources\static\my" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="blog.controller.config" />
+      <recent name="file.config" />
+      <recent name="file.controller.config" />
+      <recent name="gate.controller.config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\GitHub仓库\BBS\file-service\src\main\resources\public\avatarImg" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.GateStarter">
-    <configuration name="Test.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="auth-service" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Test" />
-      <option name="METHOD_NAME" value="test02" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.BlogServiceStarter">
     <configuration name="AuthServiceStarter" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="auth-service" />
       <extension name="coverage">
@@ -150,6 +147,19 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="auth.AuthServiceStarter" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlogServiceStarter" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="blog-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="blog.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="blog.BlogServiceStarter" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -195,11 +205,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.FileServiceStarter" />
+        <item itemvalue="Spring Boot.BlogServiceStarter" />
         <item itemvalue="Spring Boot.GateStarter" />
         <item itemvalue="Spring Boot.AuthServiceStarter" />
+        <item itemvalue="Spring Boot.FileServiceStarter" />
         <item itemvalue="Spring Boot.EurekaStarter" />
-        <item itemvalue="JUnit.Test.test02" />
       </list>
     </recent_temporary>
   </component>
@@ -229,6 +239,13 @@
       <workItem from="1642060524828" duration="32971000" />
       <workItem from="1642230658074" duration="13063000" />
       <workItem from="1642409151569" duration="19619000" />
+      <workItem from="1642491504680" duration="663000" />
+      <workItem from="1642578942997" duration="19000" />
+      <workItem from="1642581356042" duration="599000" />
+      <workItem from="1642590570082" duration="1442000" />
+      <workItem from="1642760169935" duration="3172000" />
+      <workItem from="1642831076585" duration="12834000" />
+      <workItem from="1642925754983" duration="6532000" />
     </task>
     <task id="LOCAL-00001" summary="finish a half">
       <created>1642180877864</created>
@@ -260,18 +277,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="finish a half" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="249" y="0" key="#Project_Structure" timestamp="1642060637272">
+    <state x="249" y="0" key="#Project_Structure" timestamp="1642761262423">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1642060637272" />
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1642761262423" />
     <state x="489" y="211" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1642435296997">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="489" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1642435296997" />
-    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser" timestamp="1642238802565">
+    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser" timestamp="1642929483580">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1642238802565" />
+    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1642929483580" />
     <state x="415" y="334" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1641719053326">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -284,54 +301,58 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="439" y="49" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1641655676763" />
-    <state width="1493" height="269" key="GridCell.Tab.0.bottom" timestamp="1642436856071">
+    <state x="499" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1642929155046">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="269" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1642436856071" />
-    <state width="1493" height="269" key="GridCell.Tab.0.center" timestamp="1642436856071">
+    <state x="499" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1642929155046" />
+    <state width="1493" height="269" key="GridCell.Tab.0.bottom" timestamp="1642932205471">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="269" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1642436856071" />
-    <state width="1493" height="269" key="GridCell.Tab.0.left" timestamp="1642436856071">
+    <state width="1493" height="269" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1642932205471" />
+    <state width="1493" height="269" key="GridCell.Tab.0.center" timestamp="1642932205471">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="269" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1642436856071" />
-    <state width="1493" height="269" key="GridCell.Tab.0.right" timestamp="1642436856071">
+    <state width="1493" height="269" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1642932205471" />
+    <state width="1493" height="269" key="GridCell.Tab.0.left" timestamp="1642932205471">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="269" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1642436856071" />
-    <state width="1493" height="269" key="GridCell.Tab.1.bottom" timestamp="1642436856072">
+    <state width="1493" height="269" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1642932205471" />
+    <state width="1493" height="269" key="GridCell.Tab.0.right" timestamp="1642932205471">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="269" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1642436856072" />
-    <state width="1493" height="269" key="GridCell.Tab.1.center" timestamp="1642436856072">
+    <state width="1493" height="269" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1642932205471" />
+    <state width="1493" height="269" key="GridCell.Tab.1.bottom" timestamp="1642932205472">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="269" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1642436856072" />
-    <state width="1493" height="269" key="GridCell.Tab.1.left" timestamp="1642436856072">
+    <state width="1493" height="269" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1642932205472" />
+    <state width="1493" height="269" key="GridCell.Tab.1.center" timestamp="1642932205472">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="269" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1642436856072" />
-    <state width="1493" height="269" key="GridCell.Tab.1.right" timestamp="1642436856072">
+    <state width="1493" height="269" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1642932205472" />
+    <state width="1493" height="269" key="GridCell.Tab.1.left" timestamp="1642932205471">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="269" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1642436856072" />
-    <state width="1493" height="317" key="GridCell.Tab.2.bottom" timestamp="1642421894839">
+    <state width="1493" height="269" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1642932205471" />
+    <state width="1493" height="269" key="GridCell.Tab.1.right" timestamp="1642932205472">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="317" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1642421894839" />
-    <state width="1493" height="317" key="GridCell.Tab.2.center" timestamp="1642421894839">
+    <state width="1493" height="269" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1642932205472" />
+    <state width="1493" height="317" key="GridCell.Tab.2.bottom" timestamp="1642932079839">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="317" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1642421894839" />
-    <state width="1493" height="317" key="GridCell.Tab.2.left" timestamp="1642421894839">
+    <state width="1493" height="317" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1642932079839" />
+    <state width="1493" height="317" key="GridCell.Tab.2.center" timestamp="1642932079839">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="317" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1642421894839" />
-    <state width="1493" height="317" key="GridCell.Tab.2.right" timestamp="1642421894839">
+    <state width="1493" height="317" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1642932079839" />
+    <state width="1493" height="317" key="GridCell.Tab.2.left" timestamp="1642932079839">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="317" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1642421894839" />
+    <state width="1493" height="317" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1642932079839" />
+    <state width="1493" height="317" key="GridCell.Tab.2.right" timestamp="1642932079839">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="317" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1642932079839" />
     <state x="147" y="65" key="MergeDialog" timestamp="1641542400443">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -348,10 +369,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="524" y="123" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824@0.0.1536.824" timestamp="1641542386430" />
-    <state x="178" y="72" key="new project wizard" timestamp="1641989076598">
+    <state x="178" y="72" key="new project wizard" timestamp="1642761079030">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="178" y="72" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1641989076598" />
+    <state x="178" y="72" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1642761079030" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1642173261992">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

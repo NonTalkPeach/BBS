@@ -70,25 +70,8 @@
                                     <a href="/register" class="btn header-btn">注册</a>
                                 </div>
                             </div>
-                            <script>
-                                let token = window.sessionStorage.getItem("token");
-                                if (token != null) {
-                                    document.getElementById('isAuth').style.display = 'none';
-                                    let strings = token.split("."); //截取token，获取载体
-                                    let tokenInfo = JSON.parse(decodeURIComponent(escape(window.atob(strings[1].replace(/-/g, "+").replace(/_/g, "/"))))); //解析，需要吧‘_’,'-'进行转换否则会无法解析
-
-                                    let temLi01 = document.createElement("li");
-                                    let temImg = document.createElement("img");
-                                    temImg.src = FILE_SERVER_URL + tokenInfo.userInfo.avatarUrl;
-                                    temImg.className = "taoAvatar"
-                                    temLi01.appendChild(temImg)
-                                    document.getElementById("navigation").appendChild(temLi01);
-
-                                    let temLi02 = document.createElement("li");
-                                    temLi02.innerText = tokenInfo.userInfo.username;
-                                    document.getElementById("navigation").appendChild(temLi02);
-                                }
-                            </script>
+                            <!--              导航栏渲染js              -->
+                            <script> navStarter() </script>
                         </div>
                     </div>
                     <span style="font-size: xx-small;color: darkgrey" th:text="'访问量:'+${visitors}"></span>

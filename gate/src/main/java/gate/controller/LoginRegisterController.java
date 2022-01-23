@@ -25,16 +25,15 @@ public class LoginRegisterController {
         if (correspondBean.getCode() == CorrespondBean.FAIL) {
             return "login";
         } else {
-            model.addAttribute("token",correspondBean.getData());
-            return "index";
+            return "redirect:/index/" + correspondBean.getData();
         }
     }
 
     @PostMapping("/toRegister")
     public String toRegister (HttpServletRequest request, Model model) {
         CorrespondBean correspondBean = restTemplate.postForObject(REST_URL_PREFIX_AUTH + "/toRegister", ForwardUtil.getKeyValueMapForParams(request), CorrespondBean.class);
-        model.addAttribute("msg",correspondBean.getMessage());
         if (correspondBean.getCode() == CorrespondBean.SUCCESS) {
+            model.addAttribute("msg",correspondBean.getMessage());
             return "message";
         } else {
             return "register";

@@ -13,12 +13,14 @@
         <module name="gate" />
         <module name="auth-service" />
         <module name="file-service" />
+        <module name="blog-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="auth-service" target="11" />
       <module name="base" target="11" />
       <module name="bbs" target="11" />
+      <module name="blog-service" target="11" />
       <module name="eureka" target="11" />
       <module name="file-service" target="11" />
       <module name="gate" target="11" />

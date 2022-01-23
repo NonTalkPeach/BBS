@@ -7,10 +7,12 @@ import org.springframework.http.MediaType;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
+/**
+ * 转发工具类，用于帮助封装参数
+ */
 public class ForwardUtil {
     /**
      * 不允许Post请求中有同名Key值

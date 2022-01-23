@@ -9,6 +9,7 @@
         <module>eureka</module>
         <module>auth-service</module>
         <module>file-service</module>
+        <module>blog-service</module>
     </modules>
     <groupId>tao</groupId>
     <artifactId>bbs</artifactId>

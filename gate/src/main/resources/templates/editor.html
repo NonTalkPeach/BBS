@@ -75,25 +75,8 @@
                                     <a href="/register" class="btn header-btn">注册</a>
                                 </div>
                             </div>
-                            <script>
-                                let token = window.sessionStorage.getItem("token");
-                                if (token != null) {
-                                    document.getElementById('isAuth').style.display = 'none';
-                                    let strings = token.split("."); //截取token，获取载体
-                                    let tokenInfo = JSON.parse(decodeURIComponent(escape(window.atob(strings[1].replace(/-/g, "+").replace(/_/g, "/"))))); //解析，需要吧‘_’,'-'进行转换否则会无法解析
-
-                                    let temLi01 = document.createElement("li");
-                                    let temImg = document.createElement("img");
-                                    temImg.src = FILE_SERVER_URL + tokenInfo.userInfo.avatarUrl;
-                                    temImg.className = "taoAvatar"
-                                    temLi01.appendChild(temImg)
-                                    document.getElementById("navigation").appendChild(temLi01);
-
-                                    let temLi02 = document.createElement("li");
-                                    temLi02.innerText = tokenInfo.userInfo.username;
-                                    document.getElementById("navigation").appendChild(temLi02);
-                                }
-                            </script>
+                            <!--              导航栏渲染js              -->
+                            <script> navStarter() </script>
                         </div>
                     </div>
                     <!-- Mobile Menu -->
@@ -115,7 +98,7 @@
                             <div class="input-group-append">
                                 <button class="btns">主题</button>
                             </div>
-                            <input type="text" class="form-control" placeholder='(鱼水狩太棒啦)' id="fucktitle" value="鱼水狩太棒啦"
+                            <input type="text" class="form-control" placeholder='(鱼水狩太棒啦)' id="blogTitle" value="鱼水狩太棒啦"
                                    onfocus="this.placeholder = ''"
                                    onblur="this.placeholder = '(鱼水狩太棒啦)'">
                         </div>
@@ -236,14 +219,17 @@
 
     function send() {
         let content = editor.txt.html();
-        let title = document.getElementById("fucktitle").value
+        let title = document.getElementById("blogTitle").value
+        let token = this.sessionStorage.getItem("token")
         if (title.length==0)
             alert("主题不能为空哦")
         else{
             $.post({
-                url:"/me/editor/txt",
-                data:{"content":content,
-                    "title":title
+                url:"/publishBlog",
+                data:{
+                    "content":content,
+                    "title":title,
+                    "userToken": token.substring(1,token.length - 1)
                 },
                 success:function (res) {
                     window.location.href = WEB_URL;
