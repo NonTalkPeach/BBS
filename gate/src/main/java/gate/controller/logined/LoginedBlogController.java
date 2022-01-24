@@ -3,7 +3,6 @@ package gate.controller.logined;
 import base.correspond.CorrespondBean;
 import com.auth0.jwt.JWT;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;

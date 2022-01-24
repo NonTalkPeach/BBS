@@ -1,7 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="en"
-      xmlns:th="http://thymeleaf.org"
-      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+      xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -76,10 +75,10 @@
                                     <ul id="navigation">
                                         <li><a href="/index">首页</a></li>
                                         <li><a href="/resource">资源</a></li>
-                                        <li><a href="/followed">关注</a></li>
-                                        <li><a href="/news">消息</a></li>
-                                        <li><a href="/my">我的</a></li>
-                                        <li><a href="/editor">发布帖子</a></li>
+                                        <li><a href="/followed/token">关注</a></li>
+                                        <li><a href="/news/token">消息</a></li>
+                                        <li><a href="/my/token" id="url01">我的</a></li>
+                                        <li><a href="/editor/token" id="url02">发布帖子</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -205,7 +204,6 @@
                             <img src="/assets/img/logo/logo.png" alt="QAQ">
                             <span><a href="#">245149633@qq.com</a></span>
                             <p>以上是作者邮箱,有意见可联系作者</p>
-                            <p>2021-5-1</p>
                         </div>
                     </div>
                 </div>

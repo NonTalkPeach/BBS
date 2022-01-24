@@ -29,15 +29,6 @@
     let tokenSign = [[${token}]];
     if (tokenSign != null)
         window.sessionStorage.setItem('token', JSON.stringify(tokenSign));
-    let loginMsgForAlert = [[${loginMsgForAlert}]]
-    if (loginMsgForAlert != null) {
-        if (window.sessionStorage.getItem('token') != null) window.sessionStorage.removeItem('token');
-        alert(loginMsgForAlert)
-    }
-    let msgForAlert = [[${msgForAlert}]]
-    if (msgForAlert != null) {
-        alert(msgForAlert)
-    }
 </script>
 <!-- Preloader Start -->
 <div id="preloader-active">
@@ -71,8 +62,8 @@
                                     <ul id="navigation">
                                         <li><a href="/index">首页</a></li>
                                         <li><a href="/resource">资源</a></li>
-                                        <li><a href="/followed">关注</a></li>
-                                        <li><a href="/news">消息</a></li>
+                                        <li><a href="/followed/token">关注</a></li>
+                                        <li><a href="/news/token">消息</a></li>
                                         <li><a href="/my/token" id="url01">我的</a></li>
                                         <li><a href="/editor/token" id="url02">发布帖子</a></li>
                                     </ul>
@@ -176,7 +167,6 @@
                             <img src="/assets/img/logo/logo.png" alt="QAQ">
                             <span><a href="#">245149633@qq.com</a></span>
                             <p>以上是作者邮箱,有意见可联系作者</p>
-                            <p>2021-5-1</p>
                         </div>
                     </div>
                 </div>
