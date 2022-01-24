@@ -1,6 +1,8 @@
 package gate.controller.logined;
 
 import base.correspond.CorrespondBean;
+import base.correspond.ForwardUtil;
+import com.auth0.jwt.JWT;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -27,12 +29,13 @@ public class LoginedViewController {
 
 
     @GetMapping("/index/{token}")
-    public String index(@PathVariable("token") String token, Model model){
-        CorrespondBean correspondBean = restTemplate.getForObject(
-                REST_URL_PREFIX_Blog + "/getAllBlogs",
+    public String index(@PathVariable("token") String userToken, Model model){
+        CorrespondBean correspondBean = restTemplate.postForObject(
+                REST_URL_PREFIX_Blog + "/getAllBlogsUniquely",
+                ForwardUtil.getKeyValueMapForOneParam("userCode", JWT.decode(userToken).getClaim("userInfo").asMap().get("userCode")),
                 CorrespondBean.class
         );
-        model.addAttribute("token",token);
+        model.addAttribute("token",userToken);
         model.addAttribute("FILE_SERVER_URL",fileServerUrl);
         model.addAttribute("blogs",correspondBean.getData());
         return "index";

@@ -1,7 +1,6 @@
 package blog.controller;
 
 import base.correspond.CorrespondBean;
-import blog.dao.BlogMapper;
 import blog.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,6 +14,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class CommentAndLikeController {
     @Autowired
     BlogService blogService;
+
+    @PostMapping("/comment")
+    public CorrespondBean comment(String userCode, int blogId, String content) {
+        blogService.addOneComment(userCode,blogId,content);
+        return CorrespondBean.getSuccessBean("评论成功");
+    }
 
     @PostMapping("/likeBlog")
     public CorrespondBean likeBlog(String userCode, int blogId) {

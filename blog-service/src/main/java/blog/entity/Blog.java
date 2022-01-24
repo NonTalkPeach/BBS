@@ -21,15 +21,4 @@ public class Blog {
         this.title = title;
         this.content = content;
     }
-
-    @Override
-    public String toString() {
-        return "Blog{" +
-                "id=" + id +
-                ", userCode='" + userCode + '\'' +
-                ", title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                ", createDate=" + createDate +
-                '}';
-    }
 }

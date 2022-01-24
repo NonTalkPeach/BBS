@@ -31,15 +31,51 @@ public class LoginedBlogController {
      */
     @PostMapping("/publishBlog")
     @ResponseBody
-    public String publishBlog(String userToken, String title, String content) {
+    public CorrespondBean publishBlog(String userToken, String title, String content) {
         MultiValueMap<String, Object> map = new LinkedMultiValueMap<>();
         map.add("userCode", JWT.decode(userToken).getClaim("userInfo").asMap().get("userCode"));
         map.add("content",content);
         map.add("title",title);
-        CorrespondBean correspondBean = restTemplate.postForObject(
+        return restTemplate.postForObject(
                 REST_URL_PREFIX_BLOG + "/publishBlog",
                 map,
                 CorrespondBean.class);
-        return correspondBean.getMessage();
+    }
+
+    @PostMapping("/comment")
+    @ResponseBody
+    public CorrespondBean comment(String userToken, String blogId, String content) {
+        MultiValueMap<String, Object> map = new LinkedMultiValueMap<>();
+        map.add("userCode", JWT.decode(userToken).getClaim("userInfo").asMap().get("userCode"));
+        map.add("blogId",blogId);
+        map.add("content",content);
+        return restTemplate.postForObject(
+                REST_URL_PREFIX_BLOG + "/comment",
+                map,
+                CorrespondBean.class);
+    }
+
+    @PostMapping("/likeOneBlog")
+    @ResponseBody
+    public CorrespondBean likeOneBlog(String userToken, String blogId) {
+        MultiValueMap<String, Object> map = new LinkedMultiValueMap<>();
+        map.add("userCode", JWT.decode(userToken).getClaim("userInfo").asMap().get("userCode"));
+        map.add("blogId",blogId);
+        return restTemplate.postForObject(
+                REST_URL_PREFIX_BLOG + "/likeBlog",
+                map,
+                CorrespondBean.class);
+    }
+
+    @PostMapping("/unLikeOneBlog")
+    @ResponseBody
+    public CorrespondBean unLikeOneBlog(String userToken, String blogId) {
+        MultiValueMap<String, Object> map = new LinkedMultiValueMap<>();
+        map.add("userCode", JWT.decode(userToken).getClaim("userInfo").asMap().get("userCode"));
+        map.add("blogId",blogId);
+        return restTemplate.postForObject(
+                REST_URL_PREFIX_BLOG + "/unLikeBlog",
+                map,
+                CorrespondBean.class);
     }
 }

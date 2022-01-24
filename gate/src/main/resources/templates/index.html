@@ -1,7 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="en"
-      xmlns:th="http://thymeleaf.org"
-      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+      xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -89,7 +88,6 @@
                             <script> navStarter() </script>
                         </div>
                     </div>
-                    <span style="font-size: xx-small;color: darkgrey" th:text="'访问量:'+${visitors}"></span>
                     <!-- Mobile Menu -->
                     <div class="col-12">
                         <div class="mobile_menu d-block d-lg-none"></div>
@@ -139,7 +137,7 @@
                                         </li>
                                     </ul>
                                     <ul class="blog-info-link">
-                                        <li><a href="javascript:like(this)" th:name="${blog.id}" class="likes" ><i class="fa fa-heart"></i><span th:text="${blog.id}"></span> 赞</a></li>
+                                        <li><a href="javascript:likes(this)" th:name="${blog.id}" class="likes" th:style="'color:' + ${blog.active?'#ec5b53':'#999999'}"><i class="fa fa-heart"></i><span th:text="${blog.likeSum}"></span> 赞</a></li>
                                         <li><a href="javascript:comments(this)" class="comments" th:name="${blog.id}"><i class="fa fa-comments"></i>评论</a></li>
                                     </ul>
                                     <div th:name="${blog.id}" hidden>
@@ -147,18 +145,18 @@
                                         <button class="btn btn-primary" style="padding: 15px 15px;" th:name="${blog.id}">发送</button>
                                     </div>
 
-<!--                                    <div class="about-me">-->
-<!--                                        <div class="about-me-caption" style="margin-top: 6px" th:name="${blog.blogid}">-->
-<!--                                            <h5 style="margin-left: 3%" th:each="comment:${blog.comments}">-->
-<!--                                                <div class="row">-->
-<!--                                                    <img th:src="${comment.commenteravatarurl}" class="taoComment">-->
-<!--                                                    <div style="margin-top: 8px;margin-left: 5px;font-size: medium" th:text="${comment.commenternickname}"></div>-->
-<!--                                                    <span style="margin-top: 8px;margin-left: 5px;font-size: medium">:</span>-->
-<!--                                                    <span style="margin-top: 8px;margin-left: 5px;font-size: medium" th:text="${comment.content}"></span>-->
-<!--                                                </div>-->
-<!--                                            </h5>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
+                                    <div class="about-me">
+                                        <div class="about-me-caption" style="margin-top: 6px" th:name="${blog.id}">
+                                            <h5 style="margin-left: 3%" th:each="comment:${blog.comments}">
+                                                <div class="row">
+                                                    <img th:src="${FILE_SERVER_URL} + ${comment.avatarUrl}" class="taoComment">
+                                                    <div style="margin-top: 3px;margin-left: 5px;font-size: medium" th:text="${comment.username}"></div>
+                                                    <span style="margin-top: 3px;margin-left: 5px;font-size: medium">:</span>
+                                                    <span style="margin-top: 3px;margin-left: 5px;font-size: medium" th:text="${comment.content}"></span>
+                                                </div>
+                                            </h5>
+                                        </div>
+                                    </div>
                                 </div>
                         </div>
                     </div>
@@ -242,15 +240,28 @@
 <script>
     $(function () {
         $(".likes").click(function () {
-            let a = document.getElementById("201925510124")
-            if (a != null) {
-                let val=$(this).attr("name");
+            let token = window.sessionStorage.getItem("token")
+            let color = $(this).css("color")
+            let url = ""
+            if (color == "rgb(153, 153, 153)") url = "/likeOneBlog"
+            else url = "/unLikeOneBlog"
+            if (token != null) {
+                let blogId=$(this).attr("name");
                 $.post({
-                    url: "/me/like",
-                    data: {"blogid": val},
+                    url: url,
+                    data: {
+                        "userToken":token.substring(1,token.length - 1),
+                        "blogId": blogId
+                    },
                     success: function (res) {
-                        console.log(val)
-                        document.getElementsByName(val)[0].getElementsByTagName("span")[0].innerHTML = res;
+                        let num = parseInt(document.getElementsByName(blogId)[0].getElementsByTagName("span")[0].innerHTML)
+                        if (color == "rgb(153, 153, 153)") {
+                            document.getElementsByName(blogId)[0].getElementsByTagName("span")[0].innerHTML = num + 1;
+                            document.getElementsByName(blogId)[0].style.color = "#ec5b53"
+                        } else {
+                            document.getElementsByName(blogId)[0].getElementsByTagName("span")[0].innerHTML = num - 1;
+                            document.getElementsByName(blogId)[0].style.color = "#999999"
+                        }
                     }
                 })
             } else {
@@ -258,8 +269,8 @@
             }
         })
         $(".comments").click(function () {
-            let a = document.getElementById("201925510124")
-            if (a != null) {
+            let token = window.sessionStorage.getItem("token")
+            if (token != null) {
                 let val=$(this).attr("name");
                 let c=document.getElementsByName(val)[2]
                 if(c.getAttribute("hidden")!=null){
@@ -272,26 +283,31 @@
             }
         })
         $(".btn-primary").click(function () {
-            let a = document.getElementById("201925510124")
-            if (a != null) {
-                let val=$(this).attr("name");
-                let c=document.getElementsByName(val)[2].getElementsByTagName("input")[0].value
+            let token = window.sessionStorage.getItem("token")
+            if (token != null) {
+                let blogId=$(this).attr("name");
+                let content=document.getElementsByName(blogId)[2].getElementsByTagName("input")[0].value
                 $.post({
-                    url: "/me/comment",
-                    data: {"blogid": val,"content":c},
-                    success: function (res) {
-                        document.getElementsByName(val)[2].setAttribute("hidden","hidden");
-                        console.log(res)
-                        let insert=document.getElementsByName(val)[4]
-                         html='<h5 style="margin-left: 3%">\n' +
+                    url: "/comment",
+                    data: {
+                        "userToken":token.substring(1,token.length - 1),
+                        "blogId": blogId,
+                        "content":content
+                    },
+                    success: function () {
+                        let avatar = document.getElementById("userAvatarImgID").getAttribute("src")
+                        let username = document.getElementById("usernameID").innerText
+                        document.getElementsByName(blogId)[2].setAttribute("hidden","hidden");
+                        let insert = document.getElementsByName(blogId)[4];
+                        let html='<h5 style="margin-left: 3%">\n' +
                              '  <div class="row">\n' +
-                             '      <img src='+res.commenteravatarurl+' class="taoComment">\n' +
-                             '      <div style="margin-top: 8px;margin-left: 5px;font-size: medium">'+res.commenternickname+'</div>\n' +
-                             '      <span style="margin-top: 8px;margin-left: 5px;font-size: medium">:</span>\n' +
-                             '      <span style="margin-top: 8px;margin-left: 5px;font-size: medium">'+res.content+'</span>\n' +
+                             '      <img src='+avatar+' class="taoComment">\n' +
+                             '      <div style="margin-top: 3px;margin-left: 5px;font-size: medium">'+username+'</div>\n' +
+                             '      <span style="margin-top: 3px;margin-left: 5px;font-size: medium">:</span>\n' +
+                             '      <span style="margin-top: 3px;margin-left: 5px;font-size: medium">'+content+'</span>\n' +
                              '  </div>\n' +
                              ' </h5>'
-                        insert.innerHTML+=html
+                        insert.innerHTML += html
                     }
                 })
 

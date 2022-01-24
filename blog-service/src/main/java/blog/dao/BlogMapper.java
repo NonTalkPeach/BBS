@@ -1,8 +1,6 @@
 package blog.dao;
 
-import blog.entity.Blog;
-import blog.entity.BlogForView;
-import blog.entity.BlogLike;
+import blog.entity.*;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -15,8 +13,11 @@ public interface BlogMapper {
     public int insertOneBlog(Blog blog);
     public int insertOneLike(BlogLike blogLike);
     public int deleteOneLike(BlogLike blogLike);
+    public int insertOneComment(Comment comment);
 
     //联表查询
     public List<BlogForView> selectAllBlogsForView();
+    public List<BlogForView> selectAllBlogsUniquelyForView(String userCode);
+    public List<CommentForView> selectCommentsByBlogId(int blogId);
 
 }

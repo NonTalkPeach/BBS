@@ -9,17 +9,42 @@
         <result column="avatar_url" jdbcType="VARCHAR" property="avatarUrl" />
         <result column="title" jdbcType="VARCHAR" property="title" />
         <result column="content" jdbcType="VARCHAR" property="content" />
+        <result column="like_sum" jdbcType="INTEGER" property="likeSum" />
         <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
     </resultMap>
+    <resultMap id="CommentForViewResultMap" type="blog.entity.CommentForView">
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="avatar_url" jdbcType="VARCHAR" property="avatarUrl" />
+        <result column="content" jdbcType="VARCHAR" property="content" />
+        <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    </resultMap>
+    <!--  联表查询博客  -->
+    <select id="selectAllBlogsForView" resultMap="BlogForViewResultMap">
+        SELECT id,username,avatar_url,title,content,create_date,
+                (SELECT COUNT(*) FROM blog_like WHERE blog_id = id) AS like_sum
+        FROM `user` NATURAL JOIN blog
+        ORDER BY create_date DESC
+    </select>
+    <select id="selectAllBlogsUniquelyForView" resultMap="BlogForViewResultMap">
+        SELECT id,username,avatar_url,title,content,create_date,
+                (SELECT COUNT(*) FROM blog_like WHERE blog_id = id) AS like_sum,
+                (SELECT COUNT(*) FROM blog_like WHERE blog_id = id AND user_code = #{userCode}) AS `active`
+        FROM `user` NATURAL JOIN blog
+        ORDER BY create_date DESC
+    </select>
+    <select id="selectCommentsByBlogId" resultMap="CommentForViewResultMap" parameterType="int">
+        SELECT username, avatar_url, content
+        FROM blog_comment NATURAL JOIN `user`
+        WHERE blog_id = #{blogId};
+    </select>
     <!--  Blog发布处理  -->
     <insert id="insertOneBlog" parameterType="Blog" >
         insert blog(user_code, title, content) values(#{userCode}, #{title}, #{content});
     </insert>
-    <!--  联表查询博客  -->
-    <select id="selectAllBlogsForView" resultMap="BlogForViewResultMap">
-        select id,username,avatar_url,title,content,create_date
-        from `user` natural join blog
-    </select>
+    <!--  Comment处理  -->
+    <insert id="insertOneComment" parameterType="Comment">
+        insert blog_comment(user_code, blog_id, content) values(#{userCode}, #{blogId}, #{content});
+    </insert>
     <!--  Blog点赞处理  -->
     <insert id="insertOneLike" parameterType="BlogLike">
         insert blog_like(user_code, blog_id) values(#{userCode}, #{blogId});

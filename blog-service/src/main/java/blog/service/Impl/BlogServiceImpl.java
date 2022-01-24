@@ -1,9 +1,7 @@
 package blog.service.Impl;
 
 import blog.dao.BlogMapper;
-import blog.entity.Blog;
-import blog.entity.BlogForView;
-import blog.entity.BlogLike;
+import blog.entity.*;
 import blog.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,8 +20,24 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
+    public int addOneComment(String userCode, int blogId, String content) {
+        Comment comment = new Comment(userCode, blogId, content);
+        return blogMapper.insertOneComment(comment);
+    }
+
+    @Override
     public List<BlogForView> selectAllBlogsForView() {
         return blogMapper.selectAllBlogsForView();
+    }
+
+    @Override
+    public List<BlogForView> selectAllBlogsUniquelyForView(String userCode) {
+        return blogMapper.selectAllBlogsUniquelyForView(userCode);
+    }
+
+    @Override
+    public List<CommentForView> selectCommentsForView(int blogId) {
+        return blogMapper.selectCommentsByBlogId(blogId);
     }
 
     @Override
