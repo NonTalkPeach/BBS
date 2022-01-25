@@ -19,6 +19,19 @@
         <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
     </resultMap>
     <!--  联表查询博客  -->
+    <select id="selectOneBlogByBlogIdForView" resultMap="BlogForViewResultMap">
+        SELECT id,username,avatar_url,title,content,create_date,
+                (SELECT COUNT(*) FROM blog_like WHERE blog_id = id) AS like_sum
+        FROM `user` NATURAL JOIN blog
+        where id = #{blogId}
+    </select>
+    <select id="selectOneBlogByIdUniquelyForView" resultMap="BlogForViewResultMap">
+        SELECT id,username,avatar_url,title,content,create_date,
+                (SELECT COUNT(*) FROM blog_like WHERE blog_id = id) AS like_sum,
+                (SELECT COUNT(*) FROM blog_like WHERE blog_id = id AND user_code = #{userCode}) AS `active`
+        FROM `user` NATURAL JOIN blog
+        where id = #{blogId}
+    </select>
     <select id="selectAllBlogsForView" resultMap="BlogForViewResultMap">
         SELECT id,username,avatar_url,title,content,create_date,
                 (SELECT COUNT(*) FROM blog_like WHERE blog_id = id) AS like_sum

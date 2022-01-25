@@ -26,6 +26,16 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
+    public BlogForView selectOneBlogByIdForView(int blogId) {
+        return blogMapper.selectOneBlogByBlogIdForView(blogId);
+    }
+
+    @Override
+    public BlogForView selectOneBlogByIdUniquelyForView(int blogId, String userCode) {
+        return blogMapper.selectOneBlogByIdUniquelyForView(blogId,userCode);
+    }
+
+    @Override
     public List<BlogForView> selectAllBlogsForView() {
         return blogMapper.selectAllBlogsForView();
     }

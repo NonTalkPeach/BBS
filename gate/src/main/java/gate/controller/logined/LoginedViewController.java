@@ -28,17 +28,31 @@ public class LoginedViewController {
     private static final String REST_URL_PREFIX_Blog = "http://BLOG-SERVICE/api/blog";
 
 
-    @GetMapping("/index/{token}")
-    public String index(@PathVariable("token") String userToken, Model model){
+    @GetMapping({"/index/{token}","/{token}"})
+    public String index(@PathVariable("token") String token, Model model){
         CorrespondBean correspondBean = restTemplate.postForObject(
                 REST_URL_PREFIX_Blog + "/getAllBlogsUniquely",
-                ForwardUtil.getKeyValueMapForOneParam("userCode", JWT.decode(userToken).getClaim("userInfo").asMap().get("userCode")),
+                ForwardUtil.getKeyValueMapForOneParam("userCode", JWT.decode(token).getClaim("userInfo").asMap().get("userCode")),
                 CorrespondBean.class
         );
-        model.addAttribute("token",userToken);
+        model.addAttribute("token",token);
         model.addAttribute("FILE_SERVER_URL",fileServerUrl);
         model.addAttribute("blogs",correspondBean.getData());
         return "index";
+    }
+
+    @GetMapping("/blog/{blogId}/{token}")
+    public String getOneBlogUniquely(@PathVariable("token") String token,
+                        @PathVariable("blogId") String blogId,
+                        Model model){
+        CorrespondBean correspondBean = restTemplate.getForObject(
+                REST_URL_PREFIX_Blog + "/getOneBlog/" + blogId + "/" + JWT.decode(token).getClaim("userInfo").asMap().get("userCode"),
+                CorrespondBean.class
+        );
+        model.addAttribute("token", token);
+        model.addAttribute("FILE_SERVER_URL",fileServerUrl);
+        model.addAttribute("blog",correspondBean.getData());
+        return "blog";
     }
 
     @RequestMapping("/my/{token}")

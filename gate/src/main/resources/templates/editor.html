@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>鱼水狩·发布帖子</title>
-
     <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -25,11 +23,16 @@
     <link href="/wangEditor/wangEditor.min.css" rel="stylesheet">
     <link href="/wangEditor/w-e-icon.woff" rel="stylesheet">
     <script src="/wangEditor/wangEditor.min.js"></script>
-
     <link rel="stylesheet" href="/tao/mine.css">
     <script src="/tao/config.js"></script>
 </head>
-<body>
+<body background="/assets/img/gallery/section_bg04.jpg">
+<!--              前置渲染js              -->
+<script th:inline="javascript">
+    let tokenSign = [[${token}]];
+    if (tokenSign != null && tokenSign.length > 20)
+        window.sessionStorage.setItem('token', JSON.stringify(tokenSign));
+</script>
 <!-- Preloader Start -->
 <div id="preloader-active">
     <div class="preloader d-flex align-items-center justify-content-center">
@@ -60,7 +63,7 @@
                             <div class="main-menu f-right d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="/index">首页</a></li>
+                                        <li><a href="/index" id="url03">首页</a></li>
                                         <li><a href="/resource">资源</a></li>
                                         <li><a href="/followed/token">关注</a></li>
                                         <li><a href="/news/token">消息</a></li>
@@ -110,8 +113,6 @@
         <div style="margin-left: 88%"><button class="btn btn-primary btn-lg" id="btnGenCode" role="button" type="submit" onclick="send()">发布 »</button></div>
     </div>
 </div>
-
-
 <footer>
     <!-- Footer Start-->
     <div class="footer-area">

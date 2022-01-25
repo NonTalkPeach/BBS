@@ -16,16 +16,27 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10011b1f-c22e-4c08-9d3d-8224d3efdcba" name="Default Changelist" comment="基本功能已经完成">
-      <change afterPath="$PROJECT_DIR$/gate/src/main/resources/static/assets/img/gallery/section_bg02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gate/src/main/resources/static/assets/img/gallery/section_bg04.jpg" afterDir="false" />
+    <list default="true" id="10011b1f-c22e-4c08-9d3d-8224d3efdcba" name="Default Changelist" comment="sql 文件">
+      <change afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/controller/config/GlobalControllerExceptionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/java/gate/controller/config/GlobalControllerExceptionConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/controller/logined/LoginedBlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/java/gate/controller/logined/LoginedBlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/static/assets/img/default/defaultHead.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-service/src/main/java/blog/controller/BlogInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-service/src/main/java/blog/controller/BlogInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-service/src/main/java/blog/dao/BlogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-service/src/main/java/blog/dao/BlogMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-service/src/main/java/blog/dao/mapper/blogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-service/src/main/java/blog/dao/mapper/blogMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-service/src/main/java/blog/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-service/src/main/java/blog/service/BlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-service/src/main/java/blog/service/Impl/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-service/src/main/java/blog/service/Impl/BlogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/java/gate/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/controller/logined/LoginedViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/java/gate/controller/logined/LoginedViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/static/tao/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/static/tao/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gate/src/main/resources/templates/editor.html" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/editor.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gate/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gate/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/login.html" afterDir="false" />
@@ -39,6 +50,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="ComposerSettings">
     <execution />
   </component>
@@ -46,11 +58,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="Aspect" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -77,7 +89,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/gate/src/main/resources/static/assets/img/gallery" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/gate/target/classes/static/wangEditor" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
@@ -100,14 +112,14 @@
       <recent name="gate.controller.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\GitHub仓库\BBS\gate\src\main\resources\static\assets\img\gallery" />
-      <recent name="E:\GitHub仓库\BBS\gate\src\main\resources\static\wangEditor" />
       <recent name="E:\GitHub仓库\BBS\gate\target\classes\static\wangEditor" />
+      <recent name="E:\GitHub仓库\BBS\gate\src\main\resources\static\wangEditor" />
+      <recent name="E:\GitHub仓库\BBS" />
+      <recent name="E:\GitHub仓库\BBS\gate\src\main\resources\static\assets\img\gallery" />
       <recent name="E:\GitHub仓库\BBS\file-service\src\main\java\file" />
-      <recent name="E:\GitHub仓库\BBS\file-service\src\main\resources\public" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.EurekaStarter">
+  <component name="RunManager" selected="Spring Boot.GateStarter">
     <configuration name="AuthServiceStarter" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="auth-service" />
       <extension name="coverage">
@@ -176,10 +188,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.GateStarter" />
-        <item itemvalue="Spring Boot.AuthServiceStarter" />
         <item itemvalue="Spring Boot.FileServiceStarter" />
-        <item itemvalue="Spring Boot.EurekaStarter" />
         <item itemvalue="Spring Boot.BlogServiceStarter" />
+        <item itemvalue="Spring Boot.AuthServiceStarter" />
+        <item itemvalue="Spring Boot.EurekaStarter" />
       </list>
     </recent_temporary>
   </component>
@@ -216,7 +228,8 @@
       <workItem from="1642760169935" duration="3172000" />
       <workItem from="1642831076585" duration="12834000" />
       <workItem from="1642925754983" duration="6673000" />
-      <workItem from="1642959353246" duration="19320000" />
+      <workItem from="1642959353246" duration="33503000" />
+      <workItem from="1643099956537" duration="1149000" />
     </task>
     <task id="LOCAL-00001" summary="finish a half">
       <created>1642180877864</created>
@@ -239,7 +252,21 @@
       <option name="project" value="LOCAL" />
       <updated>1643035073944</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="小bug修复">
+      <created>1643037548156</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1643037548156</updated>
+    </task>
+    <task id="LOCAL-00005" summary="sql 文件">
+      <created>1643038211786</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1643038211786</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +277,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -261,21 +300,31 @@
     <MESSAGE value="finish a half" />
     <MESSAGE value="完成微服务点赞、取消接口" />
     <MESSAGE value="基本功能已经完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="基本功能已经完成" />
+    <MESSAGE value="小bug修复" />
+    <MESSAGE value="sql 文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="sql 文件" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="395" y="91" key="#Inspections" timestamp="1643038102695">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="395" y="91" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1643038102695" />
     <state x="249" y="0" key="#Project_Structure" timestamp="1642761262423">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1642761262423" />
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1643038090930">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1643038090930" />
     <state x="489" y="211" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1642435296997">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="489" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1642435296997" />
-    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser" timestamp="1643033872906">
+    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser" timestamp="1643046451369">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1643033872906" />
+    <state x="574" y="117" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1643046451369" />
     <state x="415" y="334" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1641719053326">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -292,38 +341,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="158" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1642929155046" />
-    <state width="1493" height="122" key="GridCell.Tab.0.bottom" timestamp="1643037199735">
+    <state width="266" height="442" key="Diff.GoToChangePopup" timestamp="1643037699944">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="122" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1643037199735" />
-    <state width="1493" height="122" key="GridCell.Tab.0.center" timestamp="1643037199735">
+    <state width="266" height="442" key="Diff.GoToChangePopup/0.0.1536.824@0.0.1536.824" timestamp="1643037699944" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1643037806242">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="122" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1643037199735" />
-    <state width="1493" height="122" key="GridCell.Tab.0.left" timestamp="1643037199735">
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1643037806242" />
+    <state width="1493" height="243" key="GridCell.Tab.0.bottom" timestamp="1643100619040">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="122" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1643037199735" />
-    <state width="1493" height="122" key="GridCell.Tab.0.right" timestamp="1643037199735">
+    <state width="1493" height="243" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1643100619040" />
+    <state width="1493" height="243" key="GridCell.Tab.0.center" timestamp="1643100619039">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="122" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1643037199735" />
-    <state width="1493" height="122" key="GridCell.Tab.1.bottom" timestamp="1643037199736">
+    <state width="1493" height="243" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1643100619039" />
+    <state width="1493" height="243" key="GridCell.Tab.0.left" timestamp="1643100619039">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="122" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1643037199736" />
-    <state width="1493" height="122" key="GridCell.Tab.1.center" timestamp="1643037199736">
+    <state width="1493" height="243" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1643100619039" />
+    <state width="1493" height="243" key="GridCell.Tab.0.right" timestamp="1643100619039">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="122" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1643037199736" />
-    <state width="1493" height="122" key="GridCell.Tab.1.left" timestamp="1643037199736">
+    <state width="1493" height="243" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1643100619039" />
+    <state width="1493" height="243" key="GridCell.Tab.1.bottom" timestamp="1643100619040">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="122" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1643037199736" />
-    <state width="1493" height="122" key="GridCell.Tab.1.right" timestamp="1643037199736">
+    <state width="1493" height="243" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1643100619040" />
+    <state width="1493" height="243" key="GridCell.Tab.1.center" timestamp="1643100619040">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="122" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1643037199736" />
+    <state width="1493" height="243" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1643100619040" />
+    <state width="1493" height="243" key="GridCell.Tab.1.left" timestamp="1643100619040">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="243" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1643100619040" />
+    <state width="1493" height="243" key="GridCell.Tab.1.right" timestamp="1643100619040">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="243" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1643100619040" />
     <state width="1493" height="317" key="GridCell.Tab.2.bottom" timestamp="1642933639831">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

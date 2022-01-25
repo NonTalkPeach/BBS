@@ -1,10 +1,9 @@
 <!doctype html>
-<html class="no-js" lang="en"
-      xmlns:th="http://thymeleaf.org">
+<html class="no-js" lang="zn" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>鱼水狩·Blog</title>
+    <title>blog</title>
     <meta name="description" content="博客">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
@@ -50,7 +49,7 @@
                 <div class="row align-items-center">
                     <!-- Logo -->
                     <div class="col-xl-2 col-lg-2 col-md-1">
-                        <div class="logo row">
+                        <div class="logo">
                             <a href="/index"><img src="/assets/img/logo/logo.png" alt="QAQ"></a>
                         </div>
                     </div>
@@ -91,40 +90,18 @@
 </header>
 <main>
     <!--================Blog Area =================-->
-    <div class="blog_right_sidebar">
-        <aside class="single_sidebar_widget search_widget ">
-            <form action="#">
-                <div class="form-group">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder='Search Keyword'
-                               onfocus="this.placeholder = ''"
-                               onblur="this.placeholder = 'Search Keyword'">
-                        <div class="input-group-append">
-                            <button class="btns" type="submit"><i class="ti-search"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </aside>
-    </div>
     <div class="container">
         <div class="row">
             <div class="col-lg-12 mb-5 mb-lg-0">
                 <div class="blog_left_sidebar">
-
-                    <div class="blog_details" th:each="blog:${blogs}">
+                    <div class="blog_details">
                         <div class="row" style="margin-bottom: 15px">
                             <img th:src="${FILE_SERVER_URL} + ${blog.avatarUrl}" class="taoAvatar">
                             <div style="margin-top: 16px;margin-left: 10px" th:text="${blog.username}"></div>
                         </div>
                         <h2 th:text="${blog.title}" class="text-center"></h2>
                         <div style="width: 100%;height: 2px;background-color: #999999 "></div>
-                        <div th:utext="${blog.content}" style="max-height: 450px;overflow:auto"></div>
-                        <div style="text-align: right">
-                            <a th:href="'/blog/' + ${blog.id} +'/' + ${token}">
-                                展开阅读全文 >>
-                            </a>
-                        </div>
+                        <div th:utext="${blog.content}"></div>
                         <div style="width: 100%;height: 8px;"></div>
                         <ul class="blog-info-link">
                             <li style="color: #999999">

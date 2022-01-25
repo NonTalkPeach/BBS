@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.client.RestTemplate;
 
 /**
@@ -28,9 +29,18 @@ public class HomeController {
                 REST_URL_PREFIX_Blog + "/getAllBlogs",
                 CorrespondBean.class
         );
+        model.addAttribute("token","");
         model.addAttribute("FILE_SERVER_URL",fileServerUrl);
         model.addAttribute("blogs",correspondBean.getData());
         return "index";
+    }
+
+    @GetMapping("/blog/{blogId}")
+    public String getOneBlog(@PathVariable("blogId") int blogId, Model model){
+        CorrespondBean correspondBean = restTemplate.getForObject(REST_URL_PREFIX_Blog + "/getOneBlog/" + blogId, CorrespondBean.class);
+        model.addAttribute("FILE_SERVER_URL",fileServerUrl);
+        model.addAttribute("blog",correspondBean.getData());
+        return "blog";
     }
 
     @GetMapping("/resource")

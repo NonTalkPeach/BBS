@@ -5,13 +5,14 @@ const WEB_URL = 'http://localhost:80'
 //导航栏渲染函数
 function navStarter() {
     let token = window.sessionStorage.getItem("token");
-    if (token != null) {
+    if (token != null && token.length > 20) {
         document.getElementById('isAuth').style.display = 'none';
         let strings = token.split("."); //截取token，获取载体
         let tokenInfo = JSON.parse(decodeURIComponent(escape(window.atob(strings[1].replace(/-/g, "+").replace(/_/g, "/"))))); //解析，需要吧‘_’,'-'进行转换否则会无法解析
 
         document.getElementById("url01").href = "/my/" + token.substring(1,token.length-1)
         document.getElementById("url02").href = "/editor/" + token.substring(1,token.length-1)
+        document.getElementById("url03").href = "/" + token.substring(1,token.length-1)
 
         let temLi01 = document.createElement("li");
         let temImg = document.createElement("img");
