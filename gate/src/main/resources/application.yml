@@ -10,4 +10,4 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka/
 myconfig:
-  file-server-url: http://localhost:8001
+  file-server-url: http://192.168.0.104:8001

@@ -1,6 +1,6 @@
 //配置信息
-const FILE_SERVER_URL = "http://localhost:8001";
-const WEB_URL = 'http://localhost:80'
+const FILE_SERVER_URL = "http://192.168.0.104:8001";
+const WEB_URL = 'http://192.168.0.104:80'
 
 //导航栏渲染函数
 function navStarter() {
@@ -12,7 +12,7 @@ function navStarter() {
 
         document.getElementById("url01").href = "/my/" + token.substring(1,token.length-1)
         document.getElementById("url02").href = "/editor/" + token.substring(1,token.length-1)
-        document.getElementById("url03").href = "/" + token.substring(1,token.length-1)
+        document.getElementById("url03").href = "/index/" + token.substring(1,token.length-1)
 
         let temLi01 = document.createElement("li");
         let temImg = document.createElement("img");

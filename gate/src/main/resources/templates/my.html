@@ -38,6 +38,14 @@
     let tokenSign = [[${token}]];
     if (tokenSign != null && tokenSign.length > 20)
         window.sessionStorage.setItem('token', JSON.stringify(tokenSign));
+
+    let strings = tokenSign.split("."); //截取token，获取载体
+    let tokenInfo = JSON.parse(decodeURIComponent(escape(window.atob(strings[1].replace(/-/g, "+").replace(/_/g, "/"))))); //解析，需要吧‘_’,'-'进行转换否则会无法解析
+    var username = tokenInfo.userInfo.username;
+    var avatarUrl = tokenInfo.userInfo.avatarUrl;
+    var userCode = tokenInfo.userInfo.userCode;
+    var email = tokenInfo.userInfo.email;
+    var level = tokenInfo.userInfo.level;
 </script>
 <!-- Preloader Start -->
 <div id="preloader-active">
@@ -51,16 +59,6 @@
     </div>
 </div>
 <!-- Preloader Start -->
-<script th:inline="javascript">
-    var tokenSign = [[${token}]];
-    let strings = tokenSign.split("."); //截取token，获取载体
-    let tokenInfo = JSON.parse(decodeURIComponent(escape(window.atob(strings[1].replace(/-/g, "+").replace(/_/g, "/"))))); //解析，需要吧‘_’,'-'进行转换否则会无法解析
-    var username = tokenInfo.userInfo.username;
-    var avatarUrl = tokenInfo.userInfo.avatarUrl;
-    var userCode = tokenInfo.userInfo.userCode;
-    var email = tokenInfo.userInfo.email;
-    var level = tokenInfo.userInfo.level;
-</script>
 <header>
     <!-- Header Start -->
     <div class="header-area">
@@ -98,7 +96,6 @@
                             <script> navStarter() </script>
                         </div>
                     </div>
-                    <span style="font-size: xx-small;color: darkgrey" th:text="'访问量:'+${visitors}"></span>
                     <!-- Mobile Menu -->
                     <div class="col-12">
                         <div class="mobile_menu d-block d-lg-none"></div>
@@ -141,7 +138,8 @@
                                         <div class="avatar-upload">
                                             <input name="userToken" type="hidden" id="uploadToken">
                                             <script>
-                                                document.getElementById("uploadToken").value = this.tokenSign
+                                                let temToken = window.sessionStorage.getItem('token')
+                                                document.getElementById("uploadToken").value = temToken.substring(1,temToken.length - 1)
                                             </script>
                                             <input class="avatar-src" name="avatarSrc" type="hidden">
                                             <input class="avatar-data" name="avatarData" type="hidden">

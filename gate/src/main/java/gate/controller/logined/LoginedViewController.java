@@ -28,7 +28,7 @@ public class LoginedViewController {
     private static final String REST_URL_PREFIX_Blog = "http://BLOG-SERVICE/api/blog";
 
 
-    @GetMapping({"/index/{token}","/{token}"})
+    @GetMapping("/index/{token}")
     public String index(@PathVariable("token") String token, Model model){
         CorrespondBean correspondBean = restTemplate.postForObject(
                 REST_URL_PREFIX_Blog + "/getAllBlogsUniquely",

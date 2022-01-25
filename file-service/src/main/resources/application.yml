@@ -26,5 +26,5 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka/
 myconfig:
-  public-file-location: C:/Users/dell/Desktop/新建文件夹
-  file-location: C:/Users/dell/Desktop/新建文件夹02
+  public-file-location: C:/Users/Administrator/Desktop/静态资源
+  file-location: C:/Users/Administrator/Desktop/上传的文件

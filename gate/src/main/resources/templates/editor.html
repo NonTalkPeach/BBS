@@ -232,7 +232,10 @@
                     "userToken": token.substring(1,token.length - 1)
                 },
                 success:function (res) {
-                    window.location.href = WEB_URL;
+                    let url = WEB_URL;
+                    if (token != null && token.length > 20)
+                        url += '/index/' + token
+                    window.location.href = url;
                 }
             })
         }
