@@ -79,7 +79,6 @@
                             <script> navStarter() </script>
                         </div>
                     </div>
-                    <span style="font-size: xx-small;color: darkgrey" th:text="'访问量:'+${visitors}"></span>
                     <!-- Mobile Menu -->
                     <div class="col-12">
                         <div class="mobile_menu d-block d-lg-none"></div>
@@ -134,7 +133,7 @@
                             <div class="visit" th:text="${item.downloadSum}"></div>
                             <div class="percentage"><span th:text="${item.ownerCode}"></span></div>
                             <div class="visit">
-                                <a class="btn btn-primary" style="padding: 15px 15px; color: white" th:href="${FILE_SERVER_URL}+'/get/resources/'+${item.ownerCode}+'_'+${item.timestamp}+'_'+${item.fileName}">下载</a>
+                                <a class="btn btn-primary" style="padding: 15px 15px; color: white" th:href="${FILE_SERVER_URL}+'/get/resources/'+${item.ownerCode}+'_'+${item.timestamp}+'_'+${item.fileName} + '?fid=' + ${item.id}">下载</a>
                             </div>
                         </div>
                     </div>

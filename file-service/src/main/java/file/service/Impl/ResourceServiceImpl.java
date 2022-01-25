@@ -14,8 +14,12 @@ public class ResourceServiceImpl implements ResourceService {
     ResourceMapper resourceMapper;
     @Override
     public int insertResource(String fileName, String ownerCode, String timestamp) {
-        resourceMapper.insertResource(new Resource(fileName,ownerCode,timestamp));
-        return 1;
+        return resourceMapper.insertResource(new Resource(fileName,ownerCode,timestamp));
+    }
+
+    @Override
+    public int updateDownloadSumPlusOne(int id) {
+        return resourceMapper.updateDownloadSumPlusOne(id);
     }
 
     @Override

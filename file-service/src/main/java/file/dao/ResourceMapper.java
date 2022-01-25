@@ -10,5 +10,6 @@ import java.util.List;
 @Repository
 public interface ResourceMapper {
     public int insertResource(Resource resource);
+    public int updateDownloadSumPlusOne(int id);
     public List<Resource> selectAllResources();
 }

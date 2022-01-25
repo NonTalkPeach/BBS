@@ -17,4 +17,7 @@
     <select id="selectAllResources" resultMap="ResourceResultMap">
         select * from resource;
     </select>
+    <insert id="updateDownloadSumPlusOne" parameterType="Integer">
+        update resource set download_sum = download_sum + 1 where id = #{id};
+    </insert>
 </mapper>
