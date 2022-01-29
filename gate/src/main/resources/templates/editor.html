@@ -234,7 +234,7 @@
                 success:function (res) {
                     let url = WEB_URL;
                     if (token != null && token.length > 20)
-                        url += '/index/' + token
+                        url += '/index/' + token.substring(1,token.length - 1)
                     window.location.href = url;
                 }
             })

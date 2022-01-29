@@ -9,13 +9,13 @@ spring:
   datasource:
     username: root
     password: root
-    url: jdbc:mysql://localhost:3306/personal_project?useUnicode=true
+    url: jdbc:mysql://localhost:3306/project_final?useUnicode=true
     driver-class-name: com.mysql.cj.jdbc.Driver
   web:
     resources:
       static-locations:
         - classpath:/public
-        - file:/${myconfig.public-file-location}
+        - file:${myconfig.public-file-location}
   application:
     name: file-service
 mybatis:
@@ -26,5 +26,5 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka/
 myconfig:
-  public-file-location: C:/Users/Administrator/Desktop/静态资源
-  file-location: C:/Users/Administrator/Desktop/上传的文件
+  public-file-location: /home/wuyutao/project_final/file_statis
+  file-location: /home/wuyutao/project_final/file_upload

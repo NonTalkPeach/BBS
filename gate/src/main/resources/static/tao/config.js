@@ -1,6 +1,6 @@
 //配置信息
-const FILE_SERVER_URL = "http://192.168.0.104:8001";
-const WEB_URL = 'http://192.168.0.104:80'
+const FILE_SERVER_URL = "http://wytcloud.top:8001";
+const WEB_URL = 'http://wytcloud.top'
 
 //导航栏渲染函数
 function navStarter() {
