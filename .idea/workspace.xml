@@ -363,6 +363,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.AuthServiceStarter" />
+      <item itemvalue="Spring Boot.BlogServiceStarter" />
+      <item itemvalue="Spring Boot.EurekaStarter" />
+      <item itemvalue="Spring Boot.FileServiceStarter" />
+      <item itemvalue="Spring Boot.GateStarter" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.FileServiceStarter" />
