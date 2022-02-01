@@ -96,15 +96,20 @@
                 <div class="col-xl-6 col-lg-8 col-md-8">
                     <div class="wantToWork-caption wantToWork-caption2">
                         <h3 th:text="${msg}" style="color: red"></h3>
-                        <script th:inline="javascript">
-                            let msg = [[${msg}]]
-                            if (msg == "IllegalToken!请重新登录！") window.sessionStorage.removeItem("token")
-                        </script>
                     </div>
                 </div>
                 <div class="col-xl-2 col-lg-2 col-md-3">
-                    <a href="/" class="btn btn-black f-right">回到主页面</a>
+                    <a href="/" class="btn btn-black f-right" id = "msg">回到主页面</a>
                 </div>
+                <script th:inline="javascript">
+                    let msg = [[${msg}]]
+                    if (msg == "IllegalToken!请重新登录！") {
+                        window.sessionStorage.removeItem("token")
+                        let but = document.getElementById("msg")
+                        but.innerText = "登录"
+                        but.href = "/login"
+                    }
+                </script>
             </div>
         </div>
     </section>

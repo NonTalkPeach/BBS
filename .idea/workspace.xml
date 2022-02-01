@@ -30,10 +30,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10011b1f-c22e-4c08-9d3d-8224d3efdcba" name="Default Changelist" comment="base 打包问题">
+    <list default="true" id="10011b1f-c22e-4c08-9d3d-8224d3efdcba" name="Default Changelist" comment="login 显示">
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog-service/src/main/resources/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/templates/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/message.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +120,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BlogServiceStarter">
+  <component name="RunManager" selected="Spring Boot.AuthServiceStarter">
     <configuration name="AuthServiceStarter" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="auth-service" />
       <extension name="coverage">
@@ -193,10 +196,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.GateStarter" />
+        <item itemvalue="Spring Boot.AuthServiceStarter" />
         <item itemvalue="Spring Boot.BlogServiceStarter" />
         <item itemvalue="Spring Boot.EurekaStarter" />
         <item itemvalue="Spring Boot.FileServiceStarter" />
-        <item itemvalue="Spring Boot.AuthServiceStarter" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +226,7 @@
       <workItem from="1643266907115" duration="15000" />
       <workItem from="1643267317267" duration="1545000" />
       <workItem from="1643271830883" duration="6000" />
-      <workItem from="1643618987060" duration="647000" />
+      <workItem from="1643618987060" duration="2107000" />
     </task>
     <task id="LOCAL-00001" summary="家里修bug">
       <created>1643107576023</created>
@@ -253,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643531561988</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="login 显示">
+      <created>1643619777135</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1643619777135</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +297,8 @@
     <MESSAGE value="家里修bug" />
     <MESSAGE value="小bug完全修复" />
     <MESSAGE value="base 打包问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="base 打包问题" />
+    <MESSAGE value="login 显示" />
+    <option name="LAST_COMMIT_MESSAGE" value="login 显示" />
   </component>
   <component name="WindowStateProjectService">
     <state x="249" y="0" key="#Project_Structure" timestamp="1643219013991">
@@ -302,38 +313,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="535" y="111" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1643193873025" />
-    <state width="1105" height="291" key="GridCell.Tab.0.bottom" timestamp="1643619525005">
+    <state width="1105" height="291" key="GridCell.Tab.0.bottom" timestamp="1643699863054">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1105" height="291" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1643619525005" />
-    <state width="1105" height="291" key="GridCell.Tab.0.center" timestamp="1643619525005">
+    <state width="1105" height="291" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1643699863054" />
+    <state width="1105" height="291" key="GridCell.Tab.0.center" timestamp="1643699863054">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1105" height="291" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1643619525005" />
-    <state width="1105" height="291" key="GridCell.Tab.0.left" timestamp="1643619525005">
+    <state width="1105" height="291" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1643699863054" />
+    <state width="1105" height="291" key="GridCell.Tab.0.left" timestamp="1643699863054">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1105" height="291" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1643619525005" />
-    <state width="1105" height="291" key="GridCell.Tab.0.right" timestamp="1643619525005">
+    <state width="1105" height="291" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1643699863054" />
+    <state width="1105" height="291" key="GridCell.Tab.0.right" timestamp="1643699863054">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1105" height="291" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1643619525005" />
-    <state width="1105" height="291" key="GridCell.Tab.1.bottom" timestamp="1643619525006">
+    <state width="1105" height="291" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1643699863054" />
+    <state width="1105" height="291" key="GridCell.Tab.1.bottom" timestamp="1643699863054">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1105" height="291" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1643619525006" />
-    <state width="1105" height="291" key="GridCell.Tab.1.center" timestamp="1643619525006">
+    <state width="1105" height="291" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1643699863054" />
+    <state width="1105" height="291" key="GridCell.Tab.1.center" timestamp="1643699863054">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1105" height="291" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1643619525006" />
-    <state width="1105" height="291" key="GridCell.Tab.1.left" timestamp="1643619525005">
+    <state width="1105" height="291" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1643699863054" />
+    <state width="1105" height="291" key="GridCell.Tab.1.left" timestamp="1643699863054">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1105" height="291" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1643619525005" />
-    <state width="1105" height="291" key="GridCell.Tab.1.right" timestamp="1643619525006">
+    <state width="1105" height="291" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1643699863054" />
+    <state width="1105" height="291" key="GridCell.Tab.1.right" timestamp="1643699863054">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1105" height="291" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1643619525006" />
+    <state width="1105" height="291" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1643699863054" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1643194679968">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
