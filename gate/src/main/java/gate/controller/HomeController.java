@@ -51,13 +51,21 @@ public class HomeController {
         return "resource";
     }
 
+    /**
+     * @param model 用于AOP
+     * @return
+     */
     @GetMapping("/login")
-    public String login(){
+    public String login(Model model){
         return "login";
     }
 
+    /**
+     * @param model 用于AOP
+     * @return
+     */
     @GetMapping("/register")
-    public String register(){
+    public String register(Model model){
         return "register";
     }
 }

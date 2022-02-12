@@ -10,7 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-
+/**
+ * 该AOP 用于 Token安全验证
+ * 接收logined包下的方法首参数
+ */
 @Aspect
 @Component
 public class SecurityAspect {

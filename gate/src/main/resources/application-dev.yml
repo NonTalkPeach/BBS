@@ -1,12 +1,10 @@
 server:
-  port: 8787
+  port: 80
 spring:
   thymeleaf:
     cache: false
-  profiles:
-    active: dev
   redis:
-    host: localhost
+    host: 120.78.164.88
     port: 6379
     password: wuyutao
 eureka:
@@ -16,4 +14,4 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka/
 myconfig:
-  file-server-url: http://wytcloud.top:8001
+  file-server-url: http://localhost:8001
