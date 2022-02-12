@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import java.util.concurrent.TimeUnit;
 
 @Component
-public class OpsForString {
+public class RedisOpsForString {
     @Autowired
     @Qualifier("stringRedisTemplate")
     private StringRedisTemplate template;

@@ -1,7 +1,7 @@
 package auth.controller;
 
 import auth.entity.User;
-import auth.redis.OpsForString;
+import auth.redis.RedisOpsForString;
 import auth.service.UserService;
 import auth.utils.MailUtil;
 import base.correspond.CorrespondBean;
@@ -21,7 +21,7 @@ public class RegisterController {
     private UserService userService;
 
     @Autowired
-    private OpsForString opsForString;
+    private RedisOpsForString redisOpsForString;
 
     @Autowired
     private MailUtil mailUtil;
@@ -35,14 +35,14 @@ public class RegisterController {
      */
     @PostMapping("/toRegister")
     public CorrespondBean toRegister(String username, String email, String passwd){
-        if (opsForString.getString(username) != null || userService.tryGetUser(username) != null)
+        if (redisOpsForString.getString(username) != null || userService.tryGetUser(username) != null)
             return CorrespondBean.getFailBean("错误！该用户名已被注册");
-        if (opsForString.getString(email) != null || userService.tryGetUser(email) != null)
+        if (redisOpsForString.getString(email) != null || userService.tryGetUser(email) != null)
             return CorrespondBean.getFailBean("错误！该邮箱已被注册");
         User user = new User(username, email, passwd);
-        opsForString.setString(username,"wyt",300);
-        opsForString.setString(email,"wyt",300);
-        opsForString.setString(user.getUserCode(), JSON.toJSONString(user),300);
+        redisOpsForString.setString(username,"wyt",300);
+        redisOpsForString.setString(email,"wyt",300);
+        redisOpsForString.setString(user.getUserCode(), JSON.toJSONString(user),300);
         mailUtil.sendCode(email,user.getUserCode());
         return CorrespondBean.getSuccessBean(
                 "录入成功，激活链接已发到您的邮箱，请在5分钟之内登录邮箱点击链接激活账户.\n" +
@@ -57,7 +57,7 @@ public class RegisterController {
      */
     @RequestMapping("/toActive/{userCode}")
     public CorrespondBean toActive(@PathVariable("userCode") String userCode){
-        String userJson = opsForString.getString(userCode);
+        String userJson = redisOpsForString.getString(userCode);
         User user = JSON.parseObject(userJson, User.class);
         if (userJson == null || userService.tryGetUser(user.getEmail()) != null || userService.tryGetUser(user.getUsername()) != null)
             return CorrespondBean.getFailBean("无效码!");
