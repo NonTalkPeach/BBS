@@ -34,14 +34,28 @@ public class VisitAspect {
     public void pointCut(){
 
     }
+    @Pointcut("execution(* gate.controller.config.*.*(..))")
+    public void pointCutToGlobal(){
+
+    }
 
     @Before("pointCut()")
-    public void checkVisitNum(JoinPoint joinPoint){
+    public void checkAndAddVisitNum(JoinPoint joinPoint){
         Object[] args = joinPoint.getArgs();
         for (Object arg : args) {
             if (arg instanceof Model) {
                 Model model = (Model)arg;
                 model.addAttribute("visitorNum",redisOpsForString.increase("visitorNum"));
+            }
+        }
+    }
+    @Before("pointCutToGlobal()")
+    public void checkVisitNum(JoinPoint joinPoint){
+        Object[] args = joinPoint.getArgs();
+        for (Object arg : args) {
+            if (arg instanceof Model) {
+                Model model = (Model)arg;
+                model.addAttribute("visitorNum",redisOpsForString.getString("visitorNum"));
             }
         }
     }
