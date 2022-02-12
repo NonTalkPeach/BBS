@@ -115,8 +115,8 @@
                     <form action="/toRegister" method="post" class="contact-wrapper">
                         用户名:<input type="text" name="username" placeholder="用户名" required>
                         邮箱:<input type="email" name="email" placeholder="邮箱" required>
-                        密码:<input type="password" id="inputpassword" name="spassword" placeholder="密码" required onblur="checkSame()" onfocus = "checkSame()">
-                        确认密码:<input type="password" id="inputpassword2" name="passwd" placeholder="密码" required onblur="checkSame()" onfocus = "checkSame()">
+                        密码:<input type="password" id="inputpassword" name="spassword" placeholder="密码" required oninput = "checkSame()">
+                        确认密码:<input type="password" id="inputpassword2" name="passwd" placeholder="密码" required oninput = "checkSame()">
                         <span style="color: red" hidden id="notsame">两次密码不一致,将无法提交!</span>
                         <button class="submit-btn2" type="submit" id="sub">提交</button>
                     </form>
