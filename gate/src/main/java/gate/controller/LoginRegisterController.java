@@ -36,6 +36,7 @@ public class LoginRegisterController {
             model.addAttribute("msg",correspondBean.getMessage());
             return "message";
         } else {
+            model.addAttribute("msg",correspondBean.getMessage());
             return "register";
         }
     }

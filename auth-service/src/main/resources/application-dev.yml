@@ -12,11 +12,13 @@ spring:
     port: 6379
     password: wuyutao
   mail:
-    host: smtp.qq.com
-    username: 245149633@qq.com
-    password: dvvgdpcjulrfbhba
+    host: smtp.office365.com
+    username: NonTalkPeach@hotmail.com
+    password: tbc7gvlgej7wy3oo
     properties:
-      mail.smtp.ssl.enable: true
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
   application:
     name: auth-service
 mybatis:
