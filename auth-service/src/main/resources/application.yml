@@ -2,7 +2,7 @@ server:
   port: 8000
 spring:
   profiles:
-    active: dev
+    active: true
   #数据源配置
   datasource:
     username: root
@@ -29,4 +29,4 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka/
 myconfig:
-  web-url: http://wytcloud.top
+  web-url: https://wytcloud.top

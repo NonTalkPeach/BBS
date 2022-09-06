@@ -2,7 +2,7 @@ server:
   port: 8787
 spring:
   profiles:
-    active: dev
+    active: true
   thymeleaf:
     cache: false
   redis:

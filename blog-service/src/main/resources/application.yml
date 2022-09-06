@@ -2,12 +2,12 @@ server:
   port: 8002
 spring:
   profiles:
-    active: dev
+    active: true
   #数据源配置
   datasource:
     username: root
     password: Root123456**
-    url: jdbc:mysql://localhost:3306/project_final?useUnicode=true
+    url: jdbc:mysql://120.78.164.88:3306/project_final?useUnicode=true
     driver-class-name: com.mysql.cj.jdbc.Driver
   application:
     name: blog-service
