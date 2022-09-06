@@ -1,0 +1,16 @@
+E:\GitHub仓库\BBS\file-service\src\main\java\file\aop\SecurityAspect.java
+E:\GitHub仓库\BBS\file-service\src\main\java\file\dao\ResourceMapper.java
+E:\GitHub仓库\BBS\file-service\src\main\java\file\entity\Resource.java
+E:\GitHub仓库\BBS\file-service\src\main\java\file\controller\FileInfoController.java
+E:\GitHub仓库\BBS\file-service\src\main\java\file\config\RestTemplateConfig.java
+E:\GitHub仓库\BBS\file-service\src\main\java\file\service\UserService.java
+E:\GitHub仓库\BBS\file-service\src\main\java\file\config\FileServiceConfig.java
+E:\GitHub仓库\BBS\file-service\src\main\java\file\controller\config\GlobalControllerExceptionConfig.java
+E:\GitHub仓库\BBS\file-service\src\main\java\file\service\ResourceService.java
+E:\GitHub仓库\BBS\file-service\src\main\java\file\controller\DownloadController.java
+E:\GitHub仓库\BBS\file-service\src\main\java\file\entity\User.java
+E:\GitHub仓库\BBS\file-service\src\main\java\file\service\Impl\ResourceServiceImpl.java
+E:\GitHub仓库\BBS\file-service\src\main\java\file\service\Impl\UserServiceImpl.java
+E:\GitHub仓库\BBS\file-service\src\main\java\file\controller\UploadController.java
+E:\GitHub仓库\BBS\file-service\src\main\java\file\dao\UserMapper.java
+E:\GitHub仓库\BBS\file-service\src\main\java\file\FileServiceStarter.java
