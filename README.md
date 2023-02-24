@@ -30,14 +30,13 @@
 - Java语言开发 
 - 使用springboot框架，数据库持久层使用mybatis
 - 数据库使用mysql，redis
-- 使用nio多路复用、多线程方法优化上传下载 速度 
 - 聊天室使用websocket
 - 基于spring boot、spring cloud的分布式系统
 
-（JVM原理及调优、MQ消息队列原理及使用、mangodb，，Hadoop）
+（学习下JVM原理及调优、MQ消息队列原理及使用）
 
 ### 开发思考
     1、能否编写出一个统一的基础层框架 例如DAO层，基础层都是增删改查。
 ### 架构
     redis : 
-        1、用于注册模块，暂存注册信息
+        1、用于注册模块，暂存注册信息，防止大量无效用户访问MySQL

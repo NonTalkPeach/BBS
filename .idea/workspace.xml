@@ -30,167 +30,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10011b1f-c22e-4c08-9d3d-8224d3efdcba" name="Default Changelist" comment="添加访问量功能">
+    <list default="true" id="10011b1f-c22e-4c08-9d3d-8224d3efdcba" name="Default Changelist" comment="修bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/target/auth-service-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/target/auth-service-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-service/src/main/java/file/aop/SecurityAspect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-service/src/main/java/file/controller/DownloadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-service/src/main/java/file/controller/DownloadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-service/src/main/java/file/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/file-service/src/main/java/file/controller/UploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-service/src/main/resources/application-pro.yml" beforeDir="false" afterPath="$PROJECT_DIR$/file-service/src/main/resources/application-pro.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/file-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-service/target/classes/application-pro.yml" beforeDir="false" afterPath="$PROJECT_DIR$/file-service/target/classes/application-pro.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/file-service/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/gate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gate/gate.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gate/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/GateStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/java/gate/GateStarter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/java/gate/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/controller/LoginRegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/java/gate/controller/LoginRegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/java/gate/utils/ImgCodeUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/static/tao/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/static/tao/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/src/main/resources/templates/resource.html" beforeDir="false" afterPath="$PROJECT_DIR$/gate/src/main/resources/templates/resource.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/META-INF/gate.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/application-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/application-pro.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/css/animate.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/css/flaticon.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/css/fontawesome-all.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/css/magnific-popup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/css/nice-select.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/css/owl.carousel.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/css/price_rangs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/css/responsive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/css/slick.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/css/slicknav.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/css/style.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/css/themify-icons.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/Flaticon.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/Flaticon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/Flaticon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/Flaticon.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/Flaticon.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/_flaticon.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/fa-brands-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/fa-brands-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/fa-brands-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/fa-brands-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/fa-brands-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/fa-regular-400.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/fa-regular-400.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/fa-regular-400.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/fa-regular-400.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/fa-regular-400.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/fa-solid-900.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/fa-solid-900.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/fa-solid-900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/fa-solid-900.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/fa-solid-900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/flaticon.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/flaticon.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/themify.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/themify.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/themify.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/fonts/themify.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/img/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/img/gallery/section_bg02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/img/gallery/section_bg04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/img/hero/hero2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/img/logo/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/animated.headline.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/contact.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/jquery.ajaxchimp.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/jquery.form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/jquery.magnific-popup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/jquery.nice-select.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/jquery.paroller.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/jquery.slicknav.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/jquery.sticky.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/jquery.validate.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/mail-script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/one-page-nav-min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/owl.carousel.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/plugins.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/popper.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/price-range.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/slick.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/vendor/jquery-1.12.4.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/vendor/modernizr-3.5.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/js/wow.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_about.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_blog_page.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_bradcam.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_categories.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_color.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_common.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_contact-inof.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_contact.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_elements.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_extend.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_footer.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_h1-hero.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_headerMenu.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_listing-details.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_listing.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_location.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_overlay.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_pagination.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_pepole-visit.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_portfolio.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_services.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_services_section.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_subscribe-area.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_testimonial.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/_wantTowork.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/assets/scss/style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/avatar/bootstrap/css/bootstrap-theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/avatar/bootstrap/css/bootstrap-theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/avatar/bootstrap/css/bootstrap-theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/avatar/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/avatar/bootstrap/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/avatar/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/avatar/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/avatar/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/avatar/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/avatar/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/avatar/bootstrap/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/avatar/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/avatar/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/avatar/bootstrap/js/npm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/avatar/cropper/cropper.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/avatar/cropper/cropper.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/avatar/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/avatar/sitelogo/sitelogo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/avatar/sitelogo/sitelogo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/tao/config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/tao/mine.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/wangEditor/w-e-icon.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/wangEditor/wangEditor.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/static/wangEditor/wangEditor.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/templates/blog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/templates/editor.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/templates/message.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/templates/my.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/templates/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/classes/templates/resource.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/gate-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gate/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -452,7 +294,9 @@
       <workItem from="1677132185522" duration="3753000" />
       <workItem from="1677150815565" duration="5880000" />
       <workItem from="1677219309561" duration="6928000" />
-      <workItem from="1677226357106" duration="14794000" />
+      <workItem from="1677226357106" duration="15189000" />
+      <workItem from="1677243271125" duration="38000" />
+      <workItem from="1677243651505" duration="585000" />
     </task>
     <task id="LOCAL-00001" summary="家里修bug">
       <created>1643107576023</created>
@@ -559,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677219858797</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="修bug">
+      <created>1677241369696</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1677241369696</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,45 +447,46 @@
     <MESSAGE value="login 显示" />
     <MESSAGE value="register bug" />
     <MESSAGE value="添加访问量功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加访问量功能" />
+    <MESSAGE value="修bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修bug" />
   </component>
   <component name="WindowStateProjectService">
     <state x="695" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1677225128281">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="695" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1677225128281" />
-    <state width="1877" height="208" key="GridCell.Tab.0.bottom" timestamp="1677241246227">
+    <state width="1589" height="372" key="GridCell.Tab.0.bottom" timestamp="1677241661282">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="208" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1677241246227" />
-    <state width="1877" height="208" key="GridCell.Tab.0.center" timestamp="1677241246227">
+    <state width="1589" height="372" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1677241661282" />
+    <state width="1589" height="372" key="GridCell.Tab.0.center" timestamp="1677241661281">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="208" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1677241246227" />
-    <state width="1877" height="208" key="GridCell.Tab.0.left" timestamp="1677241246226">
+    <state width="1589" height="372" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1677241661281" />
+    <state width="1589" height="372" key="GridCell.Tab.0.left" timestamp="1677241661281">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="208" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1677241246226" />
-    <state width="1877" height="208" key="GridCell.Tab.0.right" timestamp="1677241246227">
+    <state width="1589" height="372" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1677241661281" />
+    <state width="1589" height="372" key="GridCell.Tab.0.right" timestamp="1677241661282">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="208" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1677241246227" />
-    <state width="1589" height="372" key="GridCell.Tab.1.bottom" timestamp="1677239933981">
+    <state width="1589" height="372" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1677241661282" />
+    <state width="1589" height="372" key="GridCell.Tab.1.bottom" timestamp="1677241661282">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1589" height="372" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1677239933981" />
-    <state width="1589" height="372" key="GridCell.Tab.1.center" timestamp="1677239933981">
+    <state width="1589" height="372" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1677241661282" />
+    <state width="1589" height="372" key="GridCell.Tab.1.center" timestamp="1677241661282">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1589" height="372" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1677239933981" />
-    <state width="1589" height="372" key="GridCell.Tab.1.left" timestamp="1677239933981">
+    <state width="1589" height="372" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1677241661282" />
+    <state width="1589" height="372" key="GridCell.Tab.1.left" timestamp="1677241661282">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1589" height="372" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1677239933981" />
-    <state width="1589" height="372" key="GridCell.Tab.1.right" timestamp="1677239933981">
+    <state width="1589" height="372" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1677241661282" />
+    <state width="1589" height="372" key="GridCell.Tab.1.right" timestamp="1677241661282">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1589" height="372" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1677239933981" />
+    <state width="1589" height="372" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1677241661282" />
     <state width="1589" height="272" key="GridCell.Tab.2.bottom" timestamp="1677075447468">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
