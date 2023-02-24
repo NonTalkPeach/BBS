@@ -107,10 +107,10 @@
             <div class="section-top-border">
                 <div class="row">
                     <div style="font-size: xx-large">公开资源</div>
-                    <form id = "uploadForm" action="/uploadPublicFile" enctype="multipart/form-data" method="post" style="margin-top: 1%;margin-left: 32%">
+                    <form id = "uploadForm" action="/uploadFile/uploadPublicFile" enctype="multipart/form-data" method="post" style="margin-top: 1%;margin-left: 32%">
                         <input name="userToken" type="hidden" id="uploadToken">
                         <script>
-                            document.getElementById("uploadForm").action = FILE_SERVER_URL + "/api/file/uploadPublicFile"
+                            //document.getElementById("uploadForm").action = FILE_SERVER_URL + "/api/file/uploadPublicFile"
                             let temToken = window.sessionStorage.getItem('token')
                             document.getElementById("uploadToken").value = temToken.substring(1,temToken.length - 1)
                         </script>

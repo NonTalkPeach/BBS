@@ -27,6 +27,7 @@
         <artifactId>commons-fileupload</artifactId>
         <version>1.4</version>
     </dependency>
+
     <!--  redis整合  -->
     <dependency>
         <groupId>org.springframework.boot</groupId>

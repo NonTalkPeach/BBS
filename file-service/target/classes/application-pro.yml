@@ -5,7 +5,7 @@ spring:
   datasource:
     username: root
     password: Root123456**
-    url: jdbc:mysql://localhost:3306/personal_project?useUnicode=true
+    url: jdbc:mysql://localhost:3306/project_final?useUnicode=true
     driver-class-name: com.mysql.cj.jdbc.Driver
   web:
     resources:
@@ -22,5 +22,6 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka/
 myconfig:
-  public-file-location: C:/Users/dell/Desktop/file_statis
-  file-location: C:/Users/dell/Desktop/file_statis/file_upload
+  public-file-location: /home/wuyutao/project_final_improved/file_statis
+  file-location: /home/wuyutao/project_final_improved/file_upload
+  web-url: https://wytcloud.top

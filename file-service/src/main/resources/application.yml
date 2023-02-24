@@ -3,4 +3,4 @@
 # 开放静态资源访问
 spring:
   profiles:
-    active: dev
+    active: pro

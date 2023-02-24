@@ -10,3 +10,4 @@ auth\controller\RegisterController.class
 auth\entity\User.class
 auth\AuthServiceStarter.class
 auth\controller\LoginController.class
+auth\utils\PasswordUtil.class

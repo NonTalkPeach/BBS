@@ -61,15 +61,6 @@ public class DownloadController {
         FileInputStream inputStream = new FileInputStream(file);
         ServletOutputStream outputStream = response.getOutputStream();
 
-        long start = System.currentTimeMillis();
-
-//        byte[] buffer = new byte[1024*1024];
-//        int len = 0;
-//        while ((len=inputStream.read(buffer))>0){
-//            outputStream.write(buffer,0,len);
-//        }
-//        outputStream.close();
-//        inputStream.close();
         //获取输出流通道
         WritableByteChannel writableByteChannel = Channels.newChannel(outputStream);
         FileChannel fileChannel = inputStream.getChannel();
@@ -79,7 +70,39 @@ public class DownloadController {
         fileChannel.close();
         outputStream.flush();
         writableByteChannel.close();
+    }
 
-        System.out.println((System.currentTimeMillis() - start)/1000);
+    @RequestMapping("/get/resources/bio/{location}")
+    public void downloadFileBIO (
+            @PathVariable("location") String location,
+            int fid,
+            HttpServletResponse response) throws IOException {
+        //下载量 + 1
+        resourceService.updateDownloadSumPlusOne(fid);
+
+        String path = fileLocation + "/resources/" + location;
+        File file = new File(path);
+        if (!file.exists()) {
+            throw new RuntimeException("文件不存在");
+        }
+
+        String contentType = Files.probeContentType(Paths.get(file.getAbsolutePath()));
+
+        response.setHeader("Content-Type", contentType);
+        response.setHeader("Content-Disposition","attachment;filename="+ URLEncoder.encode(location.split("_")[2],"utf-8"));
+        response.setContentLength((int) file.length());
+
+        FileInputStream inputStream = new FileInputStream(file);
+        ServletOutputStream outputStream = response.getOutputStream();
+
+
+        byte[] buffer = new byte[1024*1024];
+        int len = 0;
+        while ((len=inputStream.read(buffer))>0){
+            outputStream.write(buffer,0,len);
+        }
+        outputStream.close();
+        inputStream.close();
+
     }
 }
