@@ -55,7 +55,6 @@ public class UploadController {
         String path ="/avatarImg/" + userCode + ".jpg";
         userService.updateUserAvatar(userCode,path);
         file.transferTo(new File( publicFileLocation + path));
-//        return "redirect:" + webUrl + "/uploadAvatar/" + userToken + "/" + "200/" + path;
         return CorrespondBean.getSuccessBean("头像上传成功！",path);
     }
 
@@ -72,7 +71,6 @@ public class UploadController {
         String userCode = (String) JWT.decode(userToken).getClaim("userInfo").asMap().get("userCode");
         String path ="/blogImg/" + userCode + "_" + System.currentTimeMillis()+ ".jpg";
         file.transferTo(new File( publicFileLocation + path));
-//        return "redirect:" + webUrl + "/uploadBlogImg/" + userToken + "/" + "200/" + path;
         return CorrespondBean.getSuccessBean("博客图片上传成功！",path);
     }
 
@@ -98,6 +96,5 @@ public class UploadController {
         String path = fileLocation + "/resources/" + userCode + "_" + timestamp + "_" + file.getOriginalFilename();
         file.transferTo(new File(path));
         return "redirect:" + webUrl + "/uploadPublicFile/" + userToken + "/" + "success!";
-        //return CorrespondBean.getSuccessBean("文件上传成功！");
     }
 }

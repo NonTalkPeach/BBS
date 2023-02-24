@@ -82,14 +82,6 @@ public class LoginedUploadViewController {
     public String uploadPublicFile(@PathVariable("userToken") String userToken,
                                    @PathVariable("msg") String msg,
                                    Model model) {
-//        HttpEntity httpEntity = ForwardUtil.getHttpEntityForFile("publicFile", file);
-//        MultiValueMap body = (MultiValueMap)httpEntity.getBody();
-//        body.add("userToken", userToken);
-//        CorrespondBean correspondBean = restTemplate.postForObject(
-//                REST_URL_PREFIX_FILE + "/uploadPublicFile",
-//                httpEntity,
-//                CorrespondBean.class);
-
         model.addAttribute("msg",msg);
         return "message";
     }
