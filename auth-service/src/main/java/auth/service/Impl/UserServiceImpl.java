@@ -4,7 +4,9 @@ import auth.dao.UserMapper;
 import auth.entity.User;
 import auth.service.UserService;
 import auth.utils.JWTTokenUtil;
+import auth.utils.PasswordUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -15,6 +17,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    PasswordUtil passwordUtil;
 
     @Override
     public User tryGetUser(String emailOrUsername) {
@@ -30,7 +35,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public String toLogin(String emailOrUsername, String passwd){
         User localUser = userMapper.selectUserByEmailOrUsername(emailOrUsername);
-        if (localUser == null || !localUser.getPasswd().equals(passwd)) return null;
+        if (localUser == null || !passwordUtil.match(passwd, localUser.getPasswd())) return null;
         else {
             Map<String, Object> claimValues = new HashMap<>();
             claimValues.put("userCode",localUser.getUserCode());

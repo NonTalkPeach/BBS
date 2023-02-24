@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="file.dao.ResourceMapper">
+    <resultMap id="ResourceResultMap" type="file.entity.Resource">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="file_name" jdbcType="VARCHAR" property="fileName" />
+        <result column="file_description" jdbcType="VARCHAR" property="fileDescription" />
+        <result column="download_sum" jdbcType="VARCHAR" property="downloadSum" />
+        <result column="timestamp" jdbcType="VARCHAR" property="timestamp" />
+        <result column="owner_code" jdbcType="VARCHAR" property="ownerCode" />
+    </resultMap>
+    <insert id="insertResource" parameterType="resource">
+        insert resource(file_name,owner_code,`timestamp`) values (#{fileName},#{ownerCode},#{timestamp});
+    </insert>
+    <select id="selectAllResources" resultMap="ResourceResultMap">
+        select * from resource;
+    </select>
+    <insert id="updateDownloadSumPlusOne" parameterType="Integer">
+        update resource set download_sum = download_sum + 1 where id = #{id};
+    </insert>
+</mapper>

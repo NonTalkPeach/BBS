@@ -5,6 +5,7 @@ import base.correspond.ForwardUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +21,12 @@ public class LoginRegisterController {
 
     @PostMapping("/toLogin")
     public String toLogin (HttpServletRequest request, Model model) {
-        CorrespondBean correspondBean = restTemplate.postForObject(REST_URL_PREFIX_AUTH + "/toLogin", ForwardUtil.getKeyValueMapForParams(request), CorrespondBean.class);
+        MultiValueMap<String, String> keyValueMapForParams = ForwardUtil.getKeyValueMapForParams(request);
+        if (!keyValueMapForParams.get("checkCode").get(0).equals(request.getSession().getAttribute("checkCode"))) {
+            model.addAttribute("msg", "验证码错误");
+            return "login";
+        }
+        CorrespondBean correspondBean = restTemplate.postForObject(REST_URL_PREFIX_AUTH + "/toLogin", keyValueMapForParams, CorrespondBean.class);
         model.addAttribute("msg",correspondBean.getMessage());
         if (correspondBean.getCode() == CorrespondBean.FAIL) {
             return "login";

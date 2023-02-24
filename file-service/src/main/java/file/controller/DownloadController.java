@@ -14,9 +14,13 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URLEncoder;
+import java.nio.channels.Channels;
+import java.nio.channels.FileChannel;
+import java.nio.channels.WritableByteChannel;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 @Controller
-@ResponseBody
 public class DownloadController {
     @Value("${myconfig.file-location}")
     private String fileLocation;
@@ -34,7 +38,7 @@ public class DownloadController {
      * @throws IOException
      */
     @RequestMapping("/get/resources/{location}")
-    public CorrespondBean downloadFile (
+    public void downloadFile (
             @PathVariable("location") String location,
             int fid,
             HttpServletResponse response) throws IOException {
@@ -44,18 +48,38 @@ public class DownloadController {
         String path = fileLocation + "/resources/" + location;
         File file = new File(path);
         if (!file.exists()) {
-            return CorrespondBean.getFailBean("不存在该文件");
+            throw new RuntimeException("文件不存在");
         }
-        FileInputStream inputStream = new FileInputStream(file);
+
+
+        String contentType = Files.probeContentType(Paths.get(file.getAbsolutePath()));
+
+        response.setHeader("Content-Type", contentType);
         response.setHeader("Content-Disposition","attachment;filename="+ URLEncoder.encode(location.split("_")[2],"utf-8"));
+        response.setContentLength((int) file.length());
+
+        FileInputStream inputStream = new FileInputStream(file);
         ServletOutputStream outputStream = response.getOutputStream();
-        byte[] buffer = new byte[1024*1024];
-        int len = 0;
-        while ((len=inputStream.read(buffer))>0){
-            outputStream.write(buffer,0,len);
-        }
-        outputStream.close();
-        inputStream.close();
-        return CorrespondBean.getSuccessBean("传输成功");
+
+        long start = System.currentTimeMillis();
+
+//        byte[] buffer = new byte[1024*1024];
+//        int len = 0;
+//        while ((len=inputStream.read(buffer))>0){
+//            outputStream.write(buffer,0,len);
+//        }
+//        outputStream.close();
+//        inputStream.close();
+        //获取输出流通道
+        WritableByteChannel writableByteChannel = Channels.newChannel(outputStream);
+        FileChannel fileChannel = inputStream.getChannel();
+        //采用零拷贝的方式实现文件的下载
+        fileChannel.transferTo(0,fileChannel.size(),writableByteChannel);
+        //关闭对应的资源
+        fileChannel.close();
+        outputStream.flush();
+        writableByteChannel.close();
+
+        System.out.println((System.currentTimeMillis() - start)/1000);
     }
 }

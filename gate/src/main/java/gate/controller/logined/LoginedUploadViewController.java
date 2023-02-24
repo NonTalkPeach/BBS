@@ -9,9 +9,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.MultiValueMap;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
@@ -21,7 +19,7 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile;
  * 本类该方法首个参数必须为token
  */
 @Controller
-public class LoginedUploadController {
+public class LoginedUploadViewController {
 
     @Autowired
     RestTemplate restTemplate;
@@ -32,11 +30,6 @@ public class LoginedUploadController {
 
     /**
      * 上传头像
-     * @param file 头像文件
-     * @param avatarSrc 不知道什么东西，是null的
-     * @param avatarData 头像文件相关data
-     * @param userToken
-     * @return
      */
     @PostMapping("/uploadAvatar")
     @ResponseBody
@@ -84,23 +77,20 @@ public class LoginedUploadController {
 
     /**
      * 上传公开文件
-     * @param userToken
-     * @param file
-     * @param model
-     * @return
      */
-    @PostMapping("/uploadPublicFile")
-    public String uploadPublicFile(String userToken,
-                                   @RequestParam("publicFile") CommonsMultipartFile file,
+    @RequestMapping("/uploadPublicFile/{userToken}/{msg}")
+    public String uploadPublicFile(@PathVariable("userToken") String userToken,
+                                   @PathVariable("msg") String msg,
                                    Model model) {
-        HttpEntity httpEntity = ForwardUtil.getHttpEntityForFile("publicFile", file);
-        MultiValueMap body = (MultiValueMap)httpEntity.getBody();
-        body.add("userToken", userToken);
-        CorrespondBean correspondBean = restTemplate.postForObject(
-                REST_URL_PREFIX_FILE + "/uploadPublicFile",
-                httpEntity,
-                CorrespondBean.class);
-        model.addAttribute("msg",correspondBean.getMessage());
+//        HttpEntity httpEntity = ForwardUtil.getHttpEntityForFile("publicFile", file);
+//        MultiValueMap body = (MultiValueMap)httpEntity.getBody();
+//        body.add("userToken", userToken);
+//        CorrespondBean correspondBean = restTemplate.postForObject(
+//                REST_URL_PREFIX_FILE + "/uploadPublicFile",
+//                httpEntity,
+//                CorrespondBean.class);
+
+        model.addAttribute("msg",msg);
         return "message";
     }
 }

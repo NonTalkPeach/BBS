@@ -18,7 +18,6 @@ import java.io.IOException;
  */
 @Controller
 @RequestMapping("/api/file")
-@ResponseBody
 public class UploadController {
 
     @Value("${myconfig.file-location}")
@@ -26,6 +25,9 @@ public class UploadController {
 
     @Value("${myconfig.public-file-location}")
     private String publicFileLocation;
+
+    @Value("${myconfig.web-url}")
+    private String webUrl;
 
     @Autowired
     UserService userService;
@@ -35,17 +37,19 @@ public class UploadController {
 
     /**
      * 上传头像
-     * @param file
      * @param userToken
+     * @param file
      * @return
      * @throws IOException
      */
     @PostMapping("/uploadAvatar")
+    @ResponseBody
     public CorrespondBean uploadAvatar(String userToken, @RequestParam("avatarFile") CommonsMultipartFile file) throws IOException {
         String userCode = (String) JWT.decode(userToken).getClaim("userInfo").asMap().get("userCode");
         String path ="/avatarImg/" + userCode + ".jpg";
         userService.updateUserAvatar(userCode,path);
         file.transferTo(new File( publicFileLocation + path));
+//        return "redirect:" + webUrl + "/uploadAvatar/" + userToken + "/" + "200/" + path;
         return CorrespondBean.getSuccessBean("头像上传成功！",path);
     }
 
@@ -57,10 +61,12 @@ public class UploadController {
      * @throws IOException
      */
     @PostMapping("/uploadBlogImg")
+    @ResponseBody
     public CorrespondBean uploadBlogImg(String userToken, @RequestParam("blogImg") CommonsMultipartFile file) throws IOException {
         String userCode = (String) JWT.decode(userToken).getClaim("userInfo").asMap().get("userCode");
         String path ="/blogImg/" + userCode + "_" + System.currentTimeMillis()+ ".jpg";
         file.transferTo(new File( publicFileLocation + path));
+//        return "redirect:" + webUrl + "/uploadBlogImg/" + userToken + "/" + "200/" + path;
         return CorrespondBean.getSuccessBean("博客图片上传成功！",path);
     }
 
@@ -72,12 +78,13 @@ public class UploadController {
      * @throws IOException
      */
     @PostMapping("/uploadPublicFile")
-    public CorrespondBean uploadPublicFile(String userToken, @RequestParam("publicFile") CommonsMultipartFile file) throws IOException {
+    public String uploadPublicFile(String userToken, @RequestParam("publicFile") CommonsMultipartFile file) throws IOException {
         String userCode = (String) JWT.decode(userToken).getClaim("userInfo").asMap().get("userCode");
         String timestamp = String.valueOf(System.currentTimeMillis());
         resourceService.insertResource(file.getOriginalFilename(),userCode,timestamp);
         String path = fileLocation + "/resources/" + userCode + "_" + timestamp + "_" + file.getOriginalFilename();
         file.transferTo(new File(path));
-        return CorrespondBean.getSuccessBean("文件上传成功！");
+        return "redirect:" + webUrl + "/uploadPublicFile/" + userToken + "/" + "success！";
+        //return CorrespondBean.getSuccessBean("文件上传成功！");
     }
 }

@@ -4,6 +4,7 @@ import auth.entity.User;
 import auth.redis.RedisOpsForString;
 import auth.service.UserService;
 import auth.utils.MailUtil;
+import auth.utils.PasswordUtil;
 import base.correspond.CorrespondBean;
 import com.alibaba.fastjson.JSON;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,9 @@ public class RegisterController {
     private RedisOpsForString redisOpsForString;
 
     @Autowired
+    PasswordUtil passwordUtil;
+
+    @Autowired
     private MailUtil mailUtil;
 
     /**
@@ -39,7 +43,7 @@ public class RegisterController {
             return CorrespondBean.getFailBean("错误！该用户名已被注册");
         if (redisOpsForString.getString(email) != null || userService.tryGetUser(email) != null)
             return CorrespondBean.getFailBean("错误！该邮箱已被注册");
-        User user = new User(username, email, passwd);
+        User user = new User(username, email, passwordUtil.encode(passwd));
         redisOpsForString.setString(username,"wyt",300);
         redisOpsForString.setString(email,"wyt",300);
         redisOpsForString.setString(user.getUserCode(), JSON.toJSONString(user),300);

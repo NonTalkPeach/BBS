@@ -1,0 +1,12 @@
+E:\GitHub仓库\BBS\auth-service\src\main\java\auth\controller\RegisterController.java
+E:\GitHub仓库\BBS\auth-service\src\main\java\auth\controller\LoginController.java
+E:\GitHub仓库\BBS\auth-service\src\main\java\auth\redis\RedisOpsForString.java
+E:\GitHub仓库\BBS\auth-service\src\main\java\auth\AuthServiceStarter.java
+E:\GitHub仓库\BBS\auth-service\src\main\java\auth\controller\config\GlobalControllerExceptionConfig.java
+E:\GitHub仓库\BBS\auth-service\src\main\java\auth\service\UserService.java
+E:\GitHub仓库\BBS\auth-service\src\main\java\auth\entity\User.java
+E:\GitHub仓库\BBS\auth-service\src\main\java\auth\service\Impl\UserServiceImpl.java
+E:\GitHub仓库\BBS\auth-service\src\main\java\auth\utils\JWTTokenUtil.java
+E:\GitHub仓库\BBS\auth-service\src\main\java\auth\utils\MailUtil.java
+E:\GitHub仓库\BBS\auth-service\src\main\java\auth\dao\UserMapper.java
+E:\GitHub仓库\BBS\auth-service\src\main\java\auth\Test.java

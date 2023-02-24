@@ -1,0 +1,12 @@
+auth\service\UserService.class
+auth\Test.class
+auth\utils\JWTTokenUtil.class
+auth\service\Impl\UserServiceImpl.class
+auth\controller\config\GlobalControllerExceptionConfig.class
+auth\redis\RedisOpsForString.class
+auth\dao\UserMapper.class
+auth\utils\MailUtil.class
+auth\controller\RegisterController.class
+auth\entity\User.class
+auth\AuthServiceStarter.class
+auth\controller\LoginController.class

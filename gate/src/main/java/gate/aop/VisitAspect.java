@@ -28,7 +28,7 @@ public class VisitAspect {
     @Pointcut(
             "execution(* gate.controller.HomeController.*(..)) || " +
             "execution(* gate.controller.LoginRegisterController.*(..)) || " +
-            "execution(* gate.controller.logined.LoginedUploadController.uploadPublicFile(..)) || " +
+            "execution(* gate.controller.logined.LoginedUploadViewController.uploadPublicFile(..)) || " +
             "execution(* gate.controller.logined.LoginedViewController.*(..))"
     )
     public void pointCut(){
